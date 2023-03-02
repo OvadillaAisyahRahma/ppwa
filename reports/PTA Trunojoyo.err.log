@@ -34,6 +34,6 @@ Here is a preview of the cell contents:
 -------------------
 ['pta = []', '', 'for i in range(152,173):', '  URL = "https://pta.trunojoyo.ac.id/c_search/byprod/10/" + str(i+1)', '  r = requests.get(URL)']
 ...
-['', "    pta.append([it.a.text.strip('\\n'), tempNIM, tempNama, abstrak])", '    ', "pta_df = pd.DataFrame(pta, columns=['Judul', 'NIM', 'Penulis', 'Abstrak'])", "pta_df.to_csv('jurnalpta.csv')"]
+["    pta.append([it.a.text.strip('\\n'), tempNIM, tempNama, abstrak])", '    ', "pta_df = pd.DataFrame(pta, columns=['Judul', 'NIM', 'Penulis', 'Abstrak'])", 'print(pta_df)', "pta_df.to_csv('jurnalpta.csv')"]
 -------------------
 
