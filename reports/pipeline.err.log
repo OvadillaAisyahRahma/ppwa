@@ -3,7 +3,7 @@ Traceback (most recent call last):
     executenb(
   File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
     return loop.run_until_complete(inner)
   File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
@@ -22,8 +22,8 @@ import mysql.connector
 ------------------
 
 
-[0;31m[0m
-[0;31mModuleNotFoundError[0mTraceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
 [0;32m<ipython-input-1-6db4e08d7fa3>[0m in [0;36m<cell line: 1>[0;34m()[0m
 [0;32m----> 1[0;31m [0;32mimport[0m [0mpyodbc[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m

@@ -3,7 +3,7 @@ Traceback (most recent call last):
     executenb(
   File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
     return loop.run_until_complete(inner)
   File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
@@ -20,8 +20,8 @@ data
 ------------------
 
 
-[0;31m[0m
-[0;31mHTTPError[0mTraceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mHTTPError[0m                                 Traceback (most recent call last)
 [0;32m<ipython-input-2-1a246561d4f0>[0m in [0;36m<cell line: 1>[0;34m()[0m
 [0;32m----> 1[0;31m [0mdata[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m'https://raw.githubusercontent.com/OvadillaAisyahRahma/prosaindata/gh-pages/dataset%20pta.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mdata[0m[0;34m[0m[0;34m[0m[0m
