@@ -1,0 +1,3927 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Crawling Berita &#8212; Pro Sains Data</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 4_200411100033_Crawling Berita Kompas';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ringkasan Berita" href="Tugas%205_200411100033_Ringkasan.html" />
+    <link rel="prev" title="Implementasi Latent Directlet Allocation (LDA)" href="Tugas%203_200411100033_Ovadilla%20Aisyah%20Rahma_PPW%20A.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Pro Sains Data - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Pro Sains Data - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%203_200411100033_Ovadilla%20Aisyah%20Rahma_PPW%20A.html">Implementasi Latent Directlet Allocation (LDA)</a></li>
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling Berita</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tugas%205_200411100033_Ringkasan.html"><strong>Ringkasan Berita</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tugas%206_200411100033_PPW%20A.html"><strong>TUGAS PAGE RANK</strong></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="UAS1_200411100033_Ovadilla.html"><strong>PROJEK UAS PPW A</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="UAS2_200411100033_Ovadilla.html"><strong>Lanjutan Setelah Crawling</strong></a></li>
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/OvadillaAisyahRahma/prosaindata.git/blob/gh-pages/_sources/Tugas 4_200411100033_Crawling Berita Kompas.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/OvadillaAisyahRahma/prosaindata.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/OvadillaAisyahRahma/prosaindata.git/issues/new?title=Issue%20on%20page%20%2FTugas 4_200411100033_Crawling Berita Kompas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Tugas 4_200411100033_Crawling Berita Kompas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling Berita</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Berita</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-berita-politik">Crawling Data Berita Politik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-berita-nasional">Crawling Data Berita Nasional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-data-ke-csv">Import Data Ke CSV</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing">Pre Processing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenisasi">Tokenisasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ekstraksi-fitur">Ekstraksi Fitur</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cosinus-similarity">Cosinus Similarity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graph">Graph</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>Nama : Ovadilla Aisyah Rahma</p>
+<p>NIM : 200411100033</p>
+<p>Kelas : PPW A</p>
+<section class="tex2jax_ignore mathjax_ignore" id="crawling-berita">
+<h1>Crawling Berita<a class="headerlink" href="#crawling-berita" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>crawling data dari berita online</p></li>
+<li><p>ekstraksi kalimat dari berita online</p></li>
+<li><p>bentuk TF-IDF dari kalimat</p></li>
+<li><p>bentuk cosinus similaritas dari langkah ke 3</p></li>
+<li><p>bentuk dari langkah 4 suatu graph (library)</p></li>
+<li><p>hitung closeness centrality dari langkah 5 (library)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>requests
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>beautifulsoup4
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (2.31.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests) (2023.11.17)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="crawling-data-berita-politik">
+<h2>Crawling Data Berita Politik<a class="headerlink" href="#crawling-data-berita-politik" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;user-agent&#39;</span><span class="p">:</span><span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36&#39;</span>
+<span class="p">}</span>
+
+<span class="n">linkberita</span> <span class="o">=</span> <span class="s1">&#39;https://sorotpolitik.kompas.com/&#39;</span>
+<span class="n">listpolitik</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">37</span>
+
+<span class="k">for</span> <span class="n">halaman</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">linkberita</span><span class="p">)</span>
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+  <span class="n">items</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;article__list clearfix&#39;</span><span class="p">)</span> <span class="c1">#class semua berita</span>
+  <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;article__link&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1">#class perberita</span>
+
+    <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+    <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">judul</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;read__title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>    <span class="c1">#class judul berita</span>
+    <span class="n">isi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;read__content&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="c1">#print(judul)</span>
+    <span class="c1">#print(isi)</span>
+
+    <span class="n">listpolitik</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">judul</span><span class="p">,</span><span class="n">isi</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-3-70ce30a30af1&gt;</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">link</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;article__link&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1">#class perberita</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<span class="ne">---&gt; </span><span class="mi">16</span>     <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">judul</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;read__title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>    <span class="c1">#class judul berita</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">73</span><span class="s2">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="s2">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="s2">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="s2">         return resp</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         # Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">486</span><span class="s2">             resp = conn.urlopen(</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="s2">                 method=request.method,</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="s2">                 url=url,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="s2">             # Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">791</span><span class="s2">             response = self._make_request(</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="s2">                 conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="s2">                 method,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="s2">             # Trigger any extra validation we need to do.</span>
+<span class="g g-Whitespace">    </span><span class="mi">467</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">468</span><span class="s2">                 self._validate_conn(conn)</span>
+<span class="g g-Whitespace">    </span><span class="mi">469</span><span class="s2">             except (SocketTimeout, BaseSSLError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">470</span><span class="s2">                 self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1095</span><span class="s2">         # Force connect early to allow us to validate the connection.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span><span class="s2">         if conn.is_closed:</span>
+<span class="ne">-&gt; </span><span class="mi">1097</span><span class="s2">             conn.connect()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="s2">         if not conn.is_verified:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">640</span><span class="s2">             )</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">642</span><span class="s2">         sock_and_verified = _ssl_wrap_socket_and_match_hostname(</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span><span class="s2">             sock=sock,</span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span><span class="s2">             cert_reqs=self.cert_reqs,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">_ssl_wrap_socket_and_match_hostname</span><span class="nt">(sock, cert_reqs, ssl_version, ssl_minimum_version, ssl_maximum_version, cert_file, key_file, key_password, ca_certs, ca_cert_dir, ca_cert_data, assert_hostname, assert_fingerprint, server_hostname, ssl_context, tls_in_tls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">781</span><span class="s2">             server_hostname = normalized</span>
+<span class="g g-Whitespace">    </span><span class="mi">782</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">783</span><span class="s2">     ssl_sock = ssl_wrap_socket(</span>
+<span class="g g-Whitespace">    </span><span class="mi">784</span><span class="s2">         sock=sock,</span>
+<span class="g g-Whitespace">    </span><span class="mi">785</span><span class="s2">         keyfile=key_file,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">ssl_wrap_socket</span><span class="nt">(sock, keyfile, certfile, cert_reqs, ca_certs, server_hostname, ssl_version, ciphers, ssl_context, ca_cert_dir, key_password, ca_cert_data, tls_in_tls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">444</span><span class="s2">     if ca_certs or ca_cert_dir or ca_cert_data:</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">446</span><span class="s2">             context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2">         except OSError as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">             raise SSLError(e) from e</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="crawling-data-berita-nasional">
+<h2>Crawling Data Berita Nasional<a class="headerlink" href="#crawling-data-berita-nasional" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;user-agent&#39;</span><span class="p">:</span><span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36&#39;</span>
+<span class="p">}</span>
+
+<span class="n">linkberita</span> <span class="o">=</span> <span class="s1">&#39;https://nasional.kompas.com/search/&#39;</span>
+<span class="n">listt</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="k">for</span> <span class="n">halaman</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">linkberita</span><span class="p">)</span>
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+  <span class="n">items</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;article__list clearfix&#39;</span><span class="p">)</span> <span class="c1">#class semua berita</span>
+  <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;article__link&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1">#class perberita</span>
+
+    <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+    <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">judul</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;read__title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>    <span class="c1">#class judul berita</span>
+    <span class="n">isi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;read__content&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="c1">#print(judul)</span>
+    <span class="c1">#print(isi)</span>
+
+    <span class="n">listt</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">judul</span><span class="p">,</span><span class="n">isi</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Menggabungkan 2 kategori crawling berita yaitu nasional dan politik</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nasional</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">listt</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span> <span class="s1">&#39;Isi&#39;</span><span class="p">])</span>
+<span class="n">nasional</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Nasional&#39;</span>
+
+<span class="n">politik</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">listpolitik</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span> <span class="s1">&#39;Isi&#39;</span><span class="p">])</span>
+<span class="n">politik</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Politik&#39;</span>
+
+<span class="n">gabung</span> <span class="o">=</span> <span class="p">[</span><span class="n">nasional</span><span class="p">,</span> <span class="n">politik</span><span class="p">]</span>
+<span class="n">combined_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">gabung</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_df</span><span class="p">)</span>
+
+<span class="c1">#combined_df.to_csv(&#39;beritanasionalpolitik.csv&#39;,  index=False)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                 Judul  \
+0    Warga Depok Keluhkan KIS Tiba-tiba Non-aktif, ...   
+1    IDI Konfirmasi Kenaikan Kasus Covid-19 di Indo...   
+2    Didukung Pergerakan Perempuan Muda Nahdliyin, ...   
+3    KSAD Maruli Minta Puspenerbad Susun Teori Baru...   
+4    Setiap Sesi Debat, Capres dan Cawapres Saling ...   
+..                                                 ...   
+586  Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...   
+587  Soal Rencana Pengalihan Anggaran Bansos, TKN P...   
+588  Soal Perubahan Format Debat, TKN Sebut Siap De...   
+589  Cegah Politisasi Bansos Jelang Pemilu 2024, Sa...   
+590  Target Menangkan Anies-Muhaimin pada Pemilu 20...   
+
+                                                   Isi     Label  
+0     DEPOK, KOMPAS.com - Kepala Dinas Sosial Kota ...  Nasional  
+1    JAKARTA, KOMPAS.com - Ketua Satuan Tugas (Satg...  Nasional  
+2    JAKARTA, KOMPAS.com - Pergerakan Perempuan Mud...  Nasional  
+3    JAKARTA, KOMPAS.com - Kepala Staf TNI Angkatan...  Nasional  
+4    JAKARTA, KOMPAS.com- Komisi Pemilihan Umum (KP...  Nasional  
+..                                                 ...       ...  
+586  KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...   Politik  
+587  KOMPAS.com - Ketua Tim Komunikasi Tim Kampanye...   Politik  
+588  KOMPAS.com - Sekretaris Tim Kampanye Nasional ...   Politik  
+589  KOMPAS.com – Ketua Badan Anggaran (Banggar) De...   Politik  
+590  KOMPAS.com - Ketua Partai Kebangkitan Bangsa (...   Politik  
+
+[591 rows x 3 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># acak data nasional dan politik</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">nasional</span><span class="p">,</span> <span class="n">politik</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-b3fe54ed-8140-48e3-bac9-347615fcd960" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Isi</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sempat Keliru Disebut Gibran, Ini Manfaat Asam...</td>
+      <td>KOMPAS.com - Asam folat menjadi perbincangan p...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Soal Bantuan Gizi Prabowo-Gibran, Dewan Pakar ...</td>
+      <td>KOMPAS.com- Dewan Pakar Tim Kampanye Nasional ...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KSAD Maruli Minta Puspenerbad Susun Teori Baru...</td>
+      <td>JAKARTA, KOMPAS.com - Kepala Staf TNI Angkatan...</td>
+      <td>Nasional</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Ketua TKD Sebut Prabowo-Gibran Punya Peluang M...</td>
+      <td>JAKARTA, KOMPAS.com - Ketua Tim Kampanye Daera...</td>
+      <td>Nasional</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>586</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>587</th>
+      <td>Pejuang Wadas Jateng Siap Bersinergi Menangkan...</td>
+      <td>KOMPAS.com - Ratusan Pejuang Wadas Jawa Tengah...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>588</th>
+      <td>PKS Tolak RUU DKJ, Ahmad Syaikhu: Jika Disahka...</td>
+      <td>KOMPAS.com - Partai Keadilan Sejahtera (PKS) m...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>589</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>590</th>
+      <td>Soal Perubahan Format Debat, TKN Sebut Siap De...</td>
+      <td>KOMPAS.com - Sekretaris Tim Kampanye Nasional ...</td>
+      <td>Politik</td>
+    </tr>
+  </tbody>
+</table>
+<p>591 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b3fe54ed-8140-48e3-bac9-347615fcd960')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-b3fe54ed-8140-48e3-bac9-347615fcd960 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-b3fe54ed-8140-48e3-bac9-347615fcd960');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-31418cb2-453b-44d2-b3b5-739948c8904e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-31418cb2-453b-44d2-b3b5-739948c8904e')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-31418cb2-453b-44d2-b3b5-739948c8904e button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="import-data-ke-csv">
+<h2>Import Data Ke CSV<a class="headerlink" href="#import-data-ke-csv" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;kompasberita.csv&#39;</span><span class="p">,</span>  <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/kompasberita.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-a3eb2fed-8e84-4007-bd6d-c0588e056d9e" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Isi</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sempat Keliru Disebut Gibran, Ini Manfaat Asam...</td>
+      <td>KOMPAS.com - Asam folat menjadi perbincangan p...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Soal Bantuan Gizi Prabowo-Gibran, Dewan Pakar ...</td>
+      <td>KOMPAS.com- Dewan Pakar Tim Kampanye Nasional ...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KSAD Maruli Minta Puspenerbad Susun Teori Baru...</td>
+      <td>JAKARTA, KOMPAS.com - Kepala Staf TNI Angkatan...</td>
+      <td>Nasional</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Ketua TKD Sebut Prabowo-Gibran Punya Peluang M...</td>
+      <td>JAKARTA, KOMPAS.com - Ketua Tim Kampanye Daera...</td>
+      <td>Nasional</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>586</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>587</th>
+      <td>Pejuang Wadas Jateng Siap Bersinergi Menangkan...</td>
+      <td>KOMPAS.com - Ratusan Pejuang Wadas Jawa Tengah...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>588</th>
+      <td>PKS Tolak RUU DKJ, Ahmad Syaikhu: Jika Disahka...</td>
+      <td>KOMPAS.com - Partai Keadilan Sejahtera (PKS) m...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>589</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com - Juru Bicara (Jubir) Fraksi Partai...</td>
+      <td>Politik</td>
+    </tr>
+    <tr>
+      <th>590</th>
+      <td>Soal Perubahan Format Debat, TKN Sebut Siap De...</td>
+      <td>KOMPAS.com - Sekretaris Tim Kampanye Nasional ...</td>
+      <td>Politik</td>
+    </tr>
+  </tbody>
+</table>
+<p>591 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a3eb2fed-8e84-4007-bd6d-c0588e056d9e')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-a3eb2fed-8e84-4007-bd6d-c0588e056d9e button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-a3eb2fed-8e84-4007-bd6d-c0588e056d9e');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-d0cc1b76-b681-4b45-8820-3c680eee3635">
+  <button class="colab-df-quickchart" onclick="quickchart('df-d0cc1b76-b681-4b45-8820-3c680eee3635')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-d0cc1b76-b681-4b45-8820-3c680eee3635 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(591, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Judul    0
+Isi      0
+Label    0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pre-processing">
+<h1>Pre Processing<a class="headerlink" href="#pre-processing" title="Permalink to this heading">#</a></h1>
+<section id="cleaning">
+<h2>Cleaning<a class="headerlink" href="#cleaning" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="c1">#nltk.download(&#39;popular&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cleaning</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># Remove non-alphabetic characters (letters, spaces, and punctuation other than periods)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s.,]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cleaning&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">cleaning</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cleaning&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      KOMPAS.com  Asam folat menjadi perbincangan pu...
+1      KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...
+2      KOMPAS.com Dewan Pakar Tim Kampanye Nasional T...
+3      JAKARTA, KOMPAS.com  Kepala Staf TNI Angkatan ...
+4      JAKARTA, KOMPAS.com  Ketua Tim Kampanye Daerah...
+                             ...                        
+586    KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...
+587    KOMPAS.com  Ratusan Pejuang Wadas Jawa Tengah ...
+588    KOMPAS.com  Partai Keadilan Sejahtera PKS meno...
+589    KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...
+590    KOMPAS.com  Sekretaris Tim Kampanye Nasional T...
+Name: Cleaning, Length: 591, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cleaning</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(591, 4)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tokenisasi">
+<h2>Tokenisasi<a class="headerlink" href="#tokenisasi" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+<span class="c1"># Fungsi untuk mengekstrak artikel menjadi kalimat</span>
+<span class="k">def</span> <span class="nf">extract_sentences</span><span class="p">(</span><span class="n">article</span><span class="p">):</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sentences</span>
+
+<span class="c1"># Menerapkan fungsi extract_sentences ke setiap baris dalam kolom &#39;artikel&#39;</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cleaning&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">extract_sentences</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [KOMPAS.com  Asam folat menjadi perbincangan p...
+1      [KOMPAS.com  Juru Bicara Jubir Fraksi Partai K...
+2      [KOMPAS.com Dewan Pakar Tim Kampanye Nasional ...
+3      [JAKARTA, KOMPAS.com  Kepala Staf TNI Angkatan...
+4      [JAKARTA, KOMPAS.com  Ketua Tim Kampanye Daera...
+                             ...                        
+586    [KOMPAS.com  Juru Bicara Jubir Fraksi Partai K...
+587    [KOMPAS.com  Ratusan Pejuang Wadas Jawa Tengah...
+588    [KOMPAS.com  Partai Keadilan Sejahtera PKS men...
+589    [KOMPAS.com  Juru Bicara Jubir Fraksi Partai K...
+590    [KOMPAS.com  Sekretaris Tim Kampanye Nasional ...
+Name: Kalimat, Length: 591, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e41f21af-2063-42fa-8aec-c9333730081a" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Isi</th>
+      <th>Label</th>
+      <th>Cleaning</th>
+      <th>Kalimat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sempat Keliru Disebut Gibran, Ini Manfaat Asam...</td>
+      <td>KOMPAS.com  Asam folat menjadi perbincangan pu...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Asam folat menjadi perbincangan pu...</td>
+      <td>[KOMPAS.com  Asam folat menjadi perbincangan p...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>[KOMPAS.com  Juru Bicara Jubir Fraksi Partai K...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Soal Bantuan Gizi Prabowo-Gibran, Dewan Pakar ...</td>
+      <td>KOMPAS.com Dewan Pakar Tim Kampanye Nasional T...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com Dewan Pakar Tim Kampanye Nasional T...</td>
+      <td>[KOMPAS.com Dewan Pakar Tim Kampanye Nasional ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KSAD Maruli Minta Puspenerbad Susun Teori Baru...</td>
+      <td>JAKARTA, KOMPAS.com  Kepala Staf TNI Angkatan ...</td>
+      <td>Nasional</td>
+      <td>JAKARTA, KOMPAS.com  Kepala Staf TNI Angkatan ...</td>
+      <td>[JAKARTA, KOMPAS.com  Kepala Staf TNI Angkatan...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Ketua TKD Sebut Prabowo-Gibran Punya Peluang M...</td>
+      <td>JAKARTA, KOMPAS.com  Ketua Tim Kampanye Daerah...</td>
+      <td>Nasional</td>
+      <td>JAKARTA, KOMPAS.com  Ketua Tim Kampanye Daerah...</td>
+      <td>[JAKARTA, KOMPAS.com  Ketua Tim Kampanye Daera...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>586</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>[KOMPAS.com  Juru Bicara Jubir Fraksi Partai K...</td>
+    </tr>
+    <tr>
+      <th>587</th>
+      <td>Pejuang Wadas Jateng Siap Bersinergi Menangkan...</td>
+      <td>KOMPAS.com  Ratusan Pejuang Wadas Jawa Tengah ...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Ratusan Pejuang Wadas Jawa Tengah ...</td>
+      <td>[KOMPAS.com  Ratusan Pejuang Wadas Jawa Tengah...</td>
+    </tr>
+    <tr>
+      <th>588</th>
+      <td>PKS Tolak RUU DKJ, Ahmad Syaikhu: Jika Disahka...</td>
+      <td>KOMPAS.com  Partai Keadilan Sejahtera PKS meno...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Partai Keadilan Sejahtera PKS meno...</td>
+      <td>[KOMPAS.com  Partai Keadilan Sejahtera PKS men...</td>
+    </tr>
+    <tr>
+      <th>589</th>
+      <td>Jubir PKB: Kami Setuju Pembahasan RUU DKJ, asa...</td>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>[KOMPAS.com  Juru Bicara Jubir Fraksi Partai K...</td>
+    </tr>
+    <tr>
+      <th>590</th>
+      <td>Soal Perubahan Format Debat, TKN Sebut Siap De...</td>
+      <td>KOMPAS.com  Sekretaris Tim Kampanye Nasional T...</td>
+      <td>Politik</td>
+      <td>KOMPAS.com  Sekretaris Tim Kampanye Nasional T...</td>
+      <td>[KOMPAS.com  Sekretaris Tim Kampanye Nasional ...</td>
+    </tr>
+  </tbody>
+</table>
+<p>591 rows × 5 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e41f21af-2063-42fa-8aec-c9333730081a')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-e41f21af-2063-42fa-8aec-c9333730081a button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-e41f21af-2063-42fa-8aec-c9333730081a');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-1735214c-c388-4523-b9c9-b85af31dfdab">
+  <button class="colab-df-quickchart" onclick="quickchart('df-1735214c-c388-4523-b9c9-b85af31dfdab')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-1735214c-c388-4523-b9c9-b85af31dfdab button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;processing_DataBerita.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;KOMPAS.com  Asam folat menjadi perbincangan publik setelah calon wakil presiden cawapres nomor urut , Gibran Rakabuming Raka, keliru menyebutnya sebagai asam sulfat.&#39;,
+ &#39;Hal ini memicu pembahasan di kalangan masyarakat mengenai asam folat dan manfaatnya bagi ibu hamil.Seperti diketahui, program kerja pasangan calon presiden capres Prabowo Subianto dan cawapres Gibran menekankan pentingnya gizi untuk ibu hamil dan anak guna mencegah stunting.Salah satu inisiatif utama PrabowoGibran dalam hal tersebut adalah menyediakan susu gratis untuk ibu hamil, serta memberikan makan siang dan susu gratis untuk siswa di sekolah.Ibuibu yang hamil kami beri dukungan gizi karena mereka sudah mengandung sembilan bulan.&#39;,
+ &#39;Kami sekarang tidak mau lagi ada anak Indonesia yang kurang gizi, stunting, tidak boleh lagi ada istilah itu di bumi Indonesia, ujar Prabowo beberapa waktu lalu saat berkampanye di Kabupaten Lebak, Banten, Minggu .Baca juga Soal Salah Penyebutan Asam Folat oleh Gibran, Airlangga Masih Banyak Forum, Akan DibahasUntuk diketahui, asam folat memang dapat ditemukan di dalam susu.&#39;,
+ &#39;Asam folat merupakan bentuk sintetik dari vitamin B yang larut dalam air.&#39;,
+ &#39;Vitamin B juga dikenal dengan nama folat atau folasin.Diberitakan Kompas.com, Selasa , asam folat adalah salah satu jenis vitamin B kompleks yang bermanfaat untuk kesehatan perempuan.&#39;,
+ &#39;Bagi ibu hamil, asam folat menjadi salah satu kebutuhan utama selain zat besi, kalsium, dan mineral.American College of Obstetrics and Gynecology ACOG merekomendasikan ibu hamil setidaknya mendapatkan asupan asam folat sebesar  mikrogram mcg per hari.Adapun manfaatnya termasuk untuk proses pembentukan sel darah merah, meningkatkan daya tahan tubuh, dan proses tumbuh kembang janin, serta mencegah keguguran.Baca juga  Fungsi Asam Folat dan Dosis yang Diperlukan Ibu HamilManfaat asam folatAsam folat bersamaan dengan vitamin B dan kolin juga bisa menurunkan risiko komplikasi pada janin lainnya, seperti gangguan pembuluh darah di ariari bayi atau plasenta, kelahiran prematur, bayi berat badan lahir rendah BBLR, dan bayi dengan ukuran kecil.Untuk lebih jelasnya, berikut adalah manfaat asam folat untuk ibu hamil.Pembentukan plasentaPlasenta adalah lapisan yang terbentuk di area rahim selama masa kehamilan dan berfungsi mengalirkan oksigen serta nutrisi ke janin.&#39;,
+ &#39;Fungsinya begitu besar untuk tumbuh kembang janin sehingga pembentukannya harus optimal.Baca juga Pertama Kali, Transplantasi Rahim Berhasil Dilakukan di Korea Selatan Plasenta adalah lapisan yang terbentuk di dalam rahim selama masa kehamilan dan berperan dalam mengalirkan oksigen serta nutrisi ke janin.Fungsinya sangat penting untuk mendukung tumbuh kembang janin, sehingga proses pembentukannya harus optimal.Menekan risiko preeklamsiaMencegah preeklamsia juga dapat dilakukan dengan memastikan asupan asam folat yang cukup, terutama saat kehamilan memasuki trimester kedua.Preeklampsia merupakan kondisi ketika tekanan darah ibu hamil meningkat secara signifikan dan terdapat peningkatan kadar protein dalam urine.Baca juga Mengonsumsi Protein Nabati Cegah Penyakit Jantung hingga DiabetesProduksi sel darah merah yang lebih baikAsam folat bisa meningkatkan produksi sel darah merah sehingga ibu hamil terhindar dari anemia yang bisa memicu kelahiran prematur, berat badan bayi rendah, sampai pendarahan.Asam folat memiliki peran dalam meningkatkan produksi sel darah merah, sehingga dapat membantu ibu hamil terhindar dari anemia yang bisa memicu kelahiran prematur, berat badan bayi rendah, sampai pendarahan.Mencegah cacatKonsumsi asam folat sangat dianjurkan untuk mengurangi risiko cacat tabung saraf pada bayi.Contohnya, spina bifida adalah suatu kelainan pada tulang belakang yang dapat menyebabkan gangguan motorik, infeksi otak, dan cacat permanen.Baca juga  Fakta Klamidia, Infeksi Menular Seksual yang Bisa Bikin MandulSelain itu, risiko anensefali juga dapat dihindari dengan asupan asam folat.&#39;,
+ &#39;Anensefali adalah kelainan di mana bayi lahir tanpa sebagian otak dan tulang tengkorak, yang bahkan dapat mengakibatkan kematian.Mencegah risiko penyakit jantung bawaanAsupan asam folat yang memadai juga dapat membantu mencegah janin lahir dengan penyakit jantung bawaan.Sumber asam folatSumber asam folat dapat diperoleh melalui konsumsi makanan dan suplemen.&#39;,
+ &#39;Beberapa makanan yang mengandung asam folat, antara lain kembang kol, brokoli, serta sayuran hijau, seperti bayam, kangkung, seledri, dan lobak.Baca juga Cara Menanam Lobak agar Bisa Panen MaksimalAsam folat juga bisa diperoleh dengan mengonsumsi telur, susu, dan buahbuahan, seperti jeruk, stroberi, alpukat, serta kacangkacangan, seperti kacang kedelai, kacang hijau, dan kacang polong.Ibu hamil disarankan untuk mengonsumsi asam folat sebanyak  mcg per hari, dimulai sebelum kehamilan dan berlanjut hingga trimester pertama kehamilan.Bagi ibu hamil yang memiliki riwayat keluarga dengan cacat tabung saraf, disarankan untuk meningkatkan asupan asam folat menjadi .&#39;,
+ &#39;mcg per hari.Selain itu, asam folat dapat diperoleh melalui suplemen yang tersedia secara bebas di apotek atau toko obat.&#39;,
+ &#39;Suplemen asam folat umumnya dapat ditemukan dalam bentuk tablet atau kapsul.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ekstraksi-fitur">
+<h1>Ekstraksi Fitur<a class="headerlink" href="#ekstraksi-fitur" title="Permalink to this heading">#</a></h1>
+<section id="tf-idf">
+<h2>TF-IDF<a class="headerlink" href="#tf-idf" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">sentences</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+<span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">])</span>
+<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+<span class="n">tfidf_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-deb32a6e-192a-41c5-9e73-cbe5f9400549" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abdul</th>
+      <th>abdullah</th>
+      <th>acara</th>
+      <th>achmad</th>
+      <th>acog</th>
+      <th>ad</th>
+      <th>ada</th>
+      <th>adalah</th>
+      <th>adanya</th>
+      <th>adapun</th>
+      <th>...</th>
+      <th>yang</th>
+      <th>yani</th>
+      <th>yanma</th>
+      <th>yasin</th>
+      <th>yearonyear</th>
+      <th>youtube</th>
+      <th>youtuber</th>
+      <th>yoy</th>
+      <th>zaki</th>
+      <th>zat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.023989</td>
+      <td>0.00000</td>
+      <td>0.018520</td>
+      <td>0.066632</td>
+      <td>0.0</td>
+      <td>0.014547</td>
+      <td>...</td>
+      <td>0.115274</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.023989</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.015589</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.031464</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.021462</td>
+      <td>0.110308</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.089056</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.33633</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.059074</td>
+      <td>0.056055</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.041768</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.030375</td>
+      <td>0.0</td>
+      <td>0.023210</td>
+      <td>...</td>
+      <td>0.040872</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.436308</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>586</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.015589</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.031464</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>587</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.144989</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>588</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.026239</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.088265</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>589</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.015589</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.031464</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>590</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.039866</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.137853</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>591 rows × 2270 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-deb32a6e-192a-41c5-9e73-cbe5f9400549')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-deb32a6e-192a-41c5-9e73-cbe5f9400549 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-deb32a6e-192a-41c5-9e73-cbe5f9400549');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-17560ef8-ab38-4655-aa0a-630637e434fb">
+  <button class="colab-df-quickchart" onclick="quickchart('df-17560ef8-ab38-4655-aa0a-630637e434fb')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-17560ef8-ab38-4655-aa0a-630637e434fb button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan hasilnya ke dalam file CSV baru</span>
+<span class="n">output_file_path</span> <span class="o">=</span> <span class="s1">&#39;berita_dalam_kalimat1.csv&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cosinus-similarity">
+<h1>Cosinus Similarity<a class="headerlink" href="#cosinus-similarity" title="Permalink to this heading">#</a></h1>
+<p>Import library untuk menghitung cosinus similarity</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">len_kalimat</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">node</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_kalimat</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_kalimat</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+    <span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+    <span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]])</span>
+    <span class="n">cosine_sim</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tfidf_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">similarity_score</span> <span class="o">=</span> <span class="n">cosine_sim</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;node-</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&amp;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">),</span> <span class="n">similarity_score</span><span class="p">])</span>
+    <span class="n">node</span> <span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;node-0 0&amp;0&#39;, 1.0000000000000004],
+ [&#39;node-1 0&amp;1&#39;, 0.15653176481674955],
+ [&#39;node-2 0&amp;2&#39;, 0.5241732377802834],
+ [&#39;node-3 0&amp;3&#39;, 0.19866218672199537],
+ [&#39;node-4 0&amp;4&#39;, 0.15916023659859277],
+ [&#39;node-5 0&amp;5&#39;, 1.0000000000000004],
+ [&#39;node-6 0&amp;6&#39;, 0.15653176481674955],
+ [&#39;node-7 0&amp;7&#39;, 0.1835726765549159],
+ [&#39;node-8 0&amp;8&#39;, 0.13617311431483353],
+ [&#39;node-9 0&amp;9&#39;, 0.17780249614160307],
+ [&#39;node-10 0&amp;10&#39;, 0.17095908591525244],
+ [&#39;node-11 0&amp;11&#39;, 0.13617311431483353],
+ [&#39;node-12 0&amp;12&#39;, 1.0000000000000004],
+ [&#39;node-13 0&amp;13&#39;, 0.20776968480350463],
+ [&#39;node-14 0&amp;14&#39;, 0.17780249614160307],
+ [&#39;node-15 0&amp;15&#39;, 0.2635464606704758],
+ [&#39;node-16 0&amp;16&#39;, 0.5241732377802834],
+ [&#39;node-17 0&amp;17&#39;, 0.2782001428115166],
+ [&#39;node-18 0&amp;18&#39;, 0.5241732377802834],
+ [&#39;node-19 0&amp;19&#39;, 0.1835726765549159],
+ [&#39;node-20 0&amp;20&#39;, 0.28675947864522694],
+ [&#39;node-21 0&amp;21&#39;, 0.28675947864522694],
+ [&#39;node-22 0&amp;22&#39;, 0.30291931569904856],
+ [&#39;node-23 0&amp;23&#39;, 0.15653176481674955],
+ [&#39;node-24 0&amp;24&#39;, 0.2793302796169277],
+ [&#39;node-25 0&amp;25&#39;, 0.15916023659859277],
+ [&#39;node-26 0&amp;26&#39;, 0.2793302796169277],
+ [&#39;node-27 0&amp;27&#39;, 0.2793302796169277],
+ [&#39;node-28 0&amp;28&#39;, 0.15795155543743086],
+ [&#39;node-29 0&amp;29&#39;, 0.14581605285506327],
+ [&#39;node-30 0&amp;30&#39;, 0.19866218672199537],
+ [&#39;node-31 0&amp;31&#39;, 0.5241732377802834],
+ [&#39;node-32 0&amp;32&#39;, 0.14581605285506327],
+ [&#39;node-33 0&amp;33&#39;, 0.20776968480350463],
+ [&#39;node-34 0&amp;34&#39;, 0.15653176481674955],
+ [&#39;node-35 0&amp;35&#39;, 0.1885950727413489],
+ [&#39;node-36 0&amp;36&#39;, 0.20776968480350463],
+ [&#39;node-37 0&amp;37&#39;, 0.1885950727413489],
+ [&#39;node-38 0&amp;38&#39;, 0.1885950727413489],
+ [&#39;node-39 0&amp;39&#39;, 0.13617311431483353],
+ [&#39;node-40 0&amp;40&#39;, 0.15653176481674955],
+ [&#39;node-41 0&amp;41&#39;, 0.1835726765549159],
+ [&#39;node-42 0&amp;42&#39;, 0.5241732377802834],
+ [&#39;node-43 0&amp;43&#39;, 0.1885950727413489],
+ [&#39;node-44 0&amp;44&#39;, 0.22342441280580266],
+ [&#39;node-45 0&amp;45&#39;, 1.0000000000000004],
+ [&#39;node-46 0&amp;46&#39;, 0.15653176481674955],
+ [&#39;node-47 0&amp;47&#39;, 0.2782001428115166],
+ [&#39;node-48 0&amp;48&#39;, 0.20776968480350463],
+ [&#39;node-49 0&amp;49&#39;, 0.15916023659859277],
+ [&#39;node-50 0&amp;50&#39;, 0.14581605285506327],
+ [&#39;node-51 0&amp;51&#39;, 0.5241732377802834],
+ [&#39;node-52 0&amp;52&#39;, 0.28675947864522694],
+ [&#39;node-53 0&amp;53&#39;, 0.16527332620352755],
+ [&#39;node-54 0&amp;54&#39;, 0.15795155543743086],
+ [&#39;node-55 0&amp;55&#39;, 0.28675947864522694],
+ [&#39;node-56 0&amp;56&#39;, 0.1885950727413489],
+ [&#39;node-57 0&amp;57&#39;, 0.20776968480350463],
+ [&#39;node-58 0&amp;58&#39;, 0.20776968480350463],
+ [&#39;node-59 0&amp;59&#39;, 0.1885950727413489],
+ [&#39;node-60 0&amp;60&#39;, 0.17919981507969765],
+ [&#39;node-61 0&amp;61&#39;, 0.1885950727413489],
+ [&#39;node-62 0&amp;62&#39;, 0.16527332620352755],
+ [&#39;node-63 0&amp;63&#39;, 0.20683812987220646],
+ [&#39;node-64 0&amp;64&#39;, 0.19242103650164696],
+ [&#39;node-65 0&amp;65&#39;, 0.2793302796169277],
+ [&#39;node-66 0&amp;66&#39;, 0.15795155543743086],
+ [&#39;node-67 0&amp;67&#39;, 0.16527332620352755],
+ [&#39;node-68 0&amp;68&#39;, 0.14581605285506327],
+ [&#39;node-69 0&amp;69&#39;, 0.14581605285506327],
+ [&#39;node-70 0&amp;70&#39;, 0.2782001428115166],
+ [&#39;node-71 0&amp;71&#39;, 0.28675947864522694],
+ [&#39;node-72 0&amp;72&#39;, 0.14581605285506327],
+ [&#39;node-73 0&amp;73&#39;, 0.12410647816638769],
+ [&#39;node-74 0&amp;74&#39;, 1.0000000000000004],
+ [&#39;node-75 0&amp;75&#39;, 0.20485330106738558],
+ [&#39;node-76 0&amp;76&#39;, 0.19242103650164696],
+ [&#39;node-77 0&amp;77&#39;, 0.5241732377802834],
+ [&#39;node-78 0&amp;78&#39;, 0.1835726765549159],
+ [&#39;node-79 0&amp;79&#39;, 0.20485330106738558],
+ [&#39;node-80 0&amp;80&#39;, 0.20683812987220646],
+ [&#39;node-81 0&amp;81&#39;, 0.2793302796169277],
+ [&#39;node-82 0&amp;82&#39;, 1.0000000000000004],
+ [&#39;node-83 0&amp;83&#39;, 0.20485330106738558],
+ [&#39;node-84 0&amp;84&#39;, 0.21116791929639261],
+ [&#39;node-85 0&amp;85&#39;, 0.17095908591525244],
+ [&#39;node-86 0&amp;86&#39;, 0.28675947864522694],
+ [&#39;node-87 0&amp;87&#39;, 0.2793302796169277],
+ [&#39;node-88 0&amp;88&#39;, 0.2793302796169277],
+ [&#39;node-89 0&amp;89&#39;, 0.2782001428115166],
+ [&#39;node-90 0&amp;90&#39;, 0.20776968480350463],
+ [&#39;node-91 0&amp;91&#39;, 0.28675947864522694],
+ [&#39;node-92 0&amp;92&#39;, 0.12410647816638769],
+ [&#39;node-93 0&amp;93&#39;, 0.21116791929639261],
+ [&#39;node-94 0&amp;94&#39;, 0.15916023659859277],
+ [&#39;node-95 0&amp;95&#39;, 1.0000000000000004],
+ [&#39;node-96 0&amp;96&#39;, 0.20683812987220646],
+ [&#39;node-97 0&amp;97&#39;, 0.19242103650164696],
+ [&#39;node-98 0&amp;98&#39;, 0.15653176481674955],
+ [&#39;node-99 0&amp;99&#39;, 0.2782001428115166],
+ [&#39;node-100 0&amp;100&#39;, 0.22315005768671392],
+ [&#39;node-101 0&amp;101&#39;, 0.20776968480350463],
+ [&#39;node-102 0&amp;102&#39;, 0.1885950727413489],
+ [&#39;node-103 0&amp;103&#39;, 0.14581605285506327],
+ [&#39;node-104 0&amp;104&#39;, 0.1835726765549159],
+ [&#39;node-105 0&amp;105&#39;, 0.2793302796169277],
+ [&#39;node-106 0&amp;106&#39;, 0.15795155543743086],
+ [&#39;node-107 0&amp;107&#39;, 0.14581605285506327],
+ [&#39;node-108 0&amp;108&#39;, 0.14581605285506327],
+ [&#39;node-109 0&amp;109&#39;, 0.20485330106738558],
+ [&#39;node-110 0&amp;110&#39;, 0.30291931569904856],
+ [&#39;node-111 0&amp;111&#39;, 0.15653176481674955],
+ [&#39;node-112 0&amp;112&#39;, 0.2793302796169277],
+ [&#39;node-113 0&amp;113&#39;, 0.22342441280580266],
+ [&#39;node-114 0&amp;114&#39;, 0.14581605285506327],
+ [&#39;node-115 0&amp;115&#39;, 0.2635464606704758],
+ [&#39;node-116 0&amp;116&#39;, 0.19242103650164696],
+ [&#39;node-117 0&amp;117&#39;, 0.28675947864522694],
+ [&#39;node-118 0&amp;118&#39;, 0.14581605285506327],
+ [&#39;node-119 0&amp;119&#39;, 0.20485330106738558],
+ [&#39;node-120 0&amp;120&#39;, 0.1885950727413489],
+ [&#39;node-121 0&amp;121&#39;, 0.15653176481674955],
+ [&#39;node-122 0&amp;122&#39;, 0.17095908591525244],
+ [&#39;node-123 0&amp;123&#39;, 0.2782001428115166],
+ [&#39;node-124 0&amp;124&#39;, 0.15653176481674955],
+ [&#39;node-125 0&amp;125&#39;, 0.16527332620352755],
+ [&#39;node-126 0&amp;126&#39;, 0.2635464606704758],
+ [&#39;node-127 0&amp;127&#39;, 0.22342441280580266],
+ [&#39;node-128 0&amp;128&#39;, 0.28675947864522694],
+ [&#39;node-129 0&amp;129&#39;, 0.1835726765549159],
+ [&#39;node-130 0&amp;130&#39;, 0.1885950727413489],
+ [&#39;node-131 0&amp;131&#39;, 0.2782001428115166],
+ [&#39;node-132 0&amp;132&#39;, 0.2635464606704758],
+ [&#39;node-133 0&amp;133&#39;, 0.21116791929639261],
+ [&#39;node-134 0&amp;134&#39;, 1.0000000000000004],
+ [&#39;node-135 0&amp;135&#39;, 0.19242103650164696],
+ [&#39;node-136 0&amp;136&#39;, 1.0000000000000004],
+ [&#39;node-137 0&amp;137&#39;, 0.30291931569904856],
+ [&#39;node-138 0&amp;138&#39;, 0.13617311431483353],
+ [&#39;node-139 0&amp;139&#39;, 0.20776968480350463],
+ [&#39;node-140 0&amp;140&#39;, 0.28675947864522694],
+ [&#39;node-141 0&amp;141&#39;, 0.1885950727413489],
+ [&#39;node-142 0&amp;142&#39;, 0.30291931569904856],
+ [&#39;node-143 0&amp;143&#39;, 0.19242103650164696],
+ [&#39;node-144 0&amp;144&#39;, 0.14581605285506327],
+ [&#39;node-145 0&amp;145&#39;, 1.0000000000000004],
+ [&#39;node-146 0&amp;146&#39;, 0.20776968480350463],
+ [&#39;node-147 0&amp;147&#39;, 0.28675947864522694],
+ [&#39;node-148 0&amp;148&#39;, 0.5241732377802834],
+ [&#39;node-149 0&amp;149&#39;, 0.5241732377802834],
+ [&#39;node-150 0&amp;150&#39;, 0.15653176481674955],
+ [&#39;node-151 0&amp;151&#39;, 0.20485330106738558],
+ [&#39;node-152 0&amp;152&#39;, 0.15795155543743086],
+ [&#39;node-153 0&amp;153&#39;, 0.2793302796169277],
+ [&#39;node-154 0&amp;154&#39;, 0.16527332620352755],
+ [&#39;node-155 0&amp;155&#39;, 0.17919981507969765],
+ [&#39;node-156 0&amp;156&#39;, 0.20776968480350463],
+ [&#39;node-157 0&amp;157&#39;, 0.28675947864522694],
+ [&#39;node-158 0&amp;158&#39;, 0.20485330106738558],
+ [&#39;node-159 0&amp;159&#39;, 0.2782001428115166],
+ [&#39;node-160 0&amp;160&#39;, 0.15916023659859277],
+ [&#39;node-161 0&amp;161&#39;, 0.17095908591525244],
+ [&#39;node-162 0&amp;162&#39;, 0.20776968480350463],
+ [&#39;node-163 0&amp;163&#39;, 0.21116791929639261],
+ [&#39;node-164 0&amp;164&#39;, 0.15653176481674955],
+ [&#39;node-165 0&amp;165&#39;, 1.0000000000000004],
+ [&#39;node-166 0&amp;166&#39;, 0.15653176481674955],
+ [&#39;node-167 0&amp;167&#39;, 0.30291931569904856],
+ [&#39;node-168 0&amp;168&#39;, 0.2793302796169277],
+ [&#39;node-169 0&amp;169&#39;, 0.1885950727413489],
+ [&#39;node-170 0&amp;170&#39;, 0.17095908591525244],
+ [&#39;node-171 0&amp;171&#39;, 0.5241732377802834],
+ [&#39;node-172 0&amp;172&#39;, 0.15653176481674955],
+ [&#39;node-173 0&amp;173&#39;, 0.2782001428115166],
+ [&#39;node-174 0&amp;174&#39;, 0.20776968480350463],
+ [&#39;node-175 0&amp;175&#39;, 0.20485330106738558],
+ [&#39;node-176 0&amp;176&#39;, 0.30291931569904856],
+ [&#39;node-177 0&amp;177&#39;, 0.1885950727413489],
+ [&#39;node-178 0&amp;178&#39;, 0.2793302796169277],
+ [&#39;node-179 0&amp;179&#39;, 0.28675947864522694],
+ [&#39;node-180 0&amp;180&#39;, 0.14581605285506327],
+ [&#39;node-181 0&amp;181&#39;, 0.2635464606704758],
+ [&#39;node-182 0&amp;182&#39;, 0.15653176481674955],
+ [&#39;node-183 0&amp;183&#39;, 0.15916023659859277],
+ [&#39;node-184 0&amp;184&#39;, 0.20683812987220646],
+ [&#39;node-185 0&amp;185&#39;, 0.13617311431483353],
+ [&#39;node-186 0&amp;186&#39;, 0.2793302796169277],
+ [&#39;node-187 0&amp;187&#39;, 0.14581605285506327],
+ [&#39;node-188 0&amp;188&#39;, 0.1885950727413489],
+ [&#39;node-189 0&amp;189&#39;, 0.20683812987220646],
+ [&#39;node-190 0&amp;190&#39;, 0.19866218672199537],
+ [&#39;node-191 0&amp;191&#39;, 0.30291931569904856],
+ [&#39;node-192 0&amp;192&#39;, 0.21116791929639261],
+ [&#39;node-193 0&amp;193&#39;, 0.22315005768671392],
+ [&#39;node-194 0&amp;194&#39;, 0.1885950727413489],
+ [&#39;node-195 0&amp;195&#39;, 0.13617311431483353],
+ [&#39;node-196 0&amp;196&#39;, 0.2793302796169277],
+ [&#39;node-197 0&amp;197&#39;, 1.0000000000000004],
+ [&#39;node-198 0&amp;198&#39;, 0.12410647816638769],
+ [&#39;node-199 0&amp;199&#39;, 1.0000000000000004],
+ [&#39;node-200 0&amp;200&#39;, 0.20776968480350463],
+ [&#39;node-201 0&amp;201&#39;, 0.1835726765549159],
+ [&#39;node-202 0&amp;202&#39;, 0.2793302796169277],
+ [&#39;node-203 0&amp;203&#39;, 0.2635464606704758],
+ [&#39;node-204 0&amp;204&#39;, 0.2782001428115166],
+ [&#39;node-205 0&amp;205&#39;, 0.1885950727413489],
+ [&#39;node-206 0&amp;206&#39;, 0.22315005768671392],
+ [&#39;node-207 0&amp;207&#39;, 0.13617311431483353],
+ [&#39;node-208 0&amp;208&#39;, 0.19866218672199537],
+ [&#39;node-209 0&amp;209&#39;, 0.20683812987220646],
+ [&#39;node-210 0&amp;210&#39;, 0.22342441280580266],
+ [&#39;node-211 0&amp;211&#39;, 0.5241732377802834],
+ [&#39;node-212 0&amp;212&#39;, 0.5241732377802834],
+ [&#39;node-213 0&amp;213&#39;, 0.5241732377802834],
+ [&#39;node-214 0&amp;214&#39;, 0.15916023659859277],
+ [&#39;node-215 0&amp;215&#39;, 0.5241732377802834],
+ [&#39;node-216 0&amp;216&#39;, 0.22315005768671392],
+ [&#39;node-217 0&amp;217&#39;, 0.17919981507969765],
+ [&#39;node-218 0&amp;218&#39;, 0.13617311431483353],
+ [&#39;node-219 0&amp;219&#39;, 0.17780249614160307],
+ [&#39;node-220 0&amp;220&#39;, 1.0000000000000004],
+ [&#39;node-221 0&amp;221&#39;, 0.16527332620352755],
+ [&#39;node-222 0&amp;222&#39;, 0.20776968480350463],
+ [&#39;node-223 0&amp;223&#39;, 0.20776968480350463],
+ [&#39;node-224 0&amp;224&#39;, 0.5241732377802834],
+ [&#39;node-225 0&amp;225&#39;, 0.5241732377802834],
+ [&#39;node-226 0&amp;226&#39;, 0.20776968480350463],
+ [&#39;node-227 0&amp;227&#39;, 1.0000000000000004],
+ [&#39;node-228 0&amp;228&#39;, 0.15916023659859277],
+ [&#39;node-229 0&amp;229&#39;, 0.22315005768671392],
+ [&#39;node-230 0&amp;230&#39;, 0.30291931569904856],
+ [&#39;node-231 0&amp;231&#39;, 0.2793302796169277],
+ [&#39;node-232 0&amp;232&#39;, 0.1885950727413489],
+ [&#39;node-233 0&amp;233&#39;, 1.0000000000000004],
+ [&#39;node-234 0&amp;234&#39;, 0.12410647816638769],
+ [&#39;node-235 0&amp;235&#39;, 0.19866218672199537],
+ [&#39;node-236 0&amp;236&#39;, 0.20776968480350463],
+ [&#39;node-237 0&amp;237&#39;, 0.15795155543743086],
+ [&#39;node-238 0&amp;238&#39;, 0.14581605285506327],
+ [&#39;node-239 0&amp;239&#39;, 0.19866218672199537],
+ [&#39;node-240 0&amp;240&#39;, 0.21116791929639261],
+ [&#39;node-241 0&amp;241&#39;, 0.20683812987220646],
+ [&#39;node-242 0&amp;242&#39;, 1.0000000000000004],
+ [&#39;node-243 0&amp;243&#39;, 0.1885950727413489],
+ [&#39;node-244 0&amp;244&#39;, 0.28675947864522694],
+ [&#39;node-245 0&amp;245&#39;, 0.12410647816638769],
+ [&#39;node-246 0&amp;246&#39;, 0.2793302796169277],
+ [&#39;node-247 0&amp;247&#39;, 0.5241732377802834],
+ [&#39;node-248 0&amp;248&#39;, 0.17919981507969765],
+ [&#39;node-249 0&amp;249&#39;, 0.28675947864522694],
+ [&#39;node-250 0&amp;250&#39;, 0.17780249614160307],
+ [&#39;node-251 0&amp;251&#39;, 0.28675947864522694],
+ [&#39;node-252 0&amp;252&#39;, 0.16527332620352755],
+ [&#39;node-253 0&amp;253&#39;, 0.2782001428115166],
+ [&#39;node-254 0&amp;254&#39;, 0.19242103650164696],
+ [&#39;node-255 0&amp;255&#39;, 0.5241732377802834],
+ [&#39;node-256 0&amp;256&#39;, 0.14581605285506327],
+ [&#39;node-257 0&amp;257&#39;, 0.2782001428115166],
+ [&#39;node-258 0&amp;258&#39;, 0.14581605285506327],
+ [&#39;node-259 0&amp;259&#39;, 0.5241732377802834],
+ [&#39;node-260 0&amp;260&#39;, 0.17919981507969765],
+ [&#39;node-261 0&amp;261&#39;, 0.20776968480350463],
+ [&#39;node-262 0&amp;262&#39;, 0.20683812987220646],
+ [&#39;node-263 0&amp;263&#39;, 0.2782001428115166],
+ [&#39;node-264 0&amp;264&#39;, 0.2793302796169277],
+ [&#39;node-265 0&amp;265&#39;, 0.20776968480350463],
+ [&#39;node-266 0&amp;266&#39;, 0.28675947864522694],
+ [&#39;node-267 0&amp;267&#39;, 1.0000000000000004],
+ [&#39;node-268 0&amp;268&#39;, 0.2782001428115166],
+ [&#39;node-269 0&amp;269&#39;, 0.2782001428115166],
+ [&#39;node-270 0&amp;270&#39;, 0.17095908591525244],
+ [&#39;node-271 0&amp;271&#39;, 0.15653176481674955],
+ [&#39;node-272 0&amp;272&#39;, 0.5241732377802834],
+ [&#39;node-273 0&amp;273&#39;, 1.0000000000000004],
+ [&#39;node-274 0&amp;274&#39;, 0.17780249614160307],
+ [&#39;node-275 0&amp;275&#39;, 0.2635464606704758],
+ [&#39;node-276 0&amp;276&#39;, 0.14581605285506327],
+ [&#39;node-277 0&amp;277&#39;, 0.17780249614160307],
+ [&#39;node-278 0&amp;278&#39;, 0.15653176481674955],
+ [&#39;node-279 0&amp;279&#39;, 0.2793302796169277],
+ [&#39;node-280 0&amp;280&#39;, 0.17919981507969765],
+ [&#39;node-281 0&amp;281&#39;, 1.0000000000000004],
+ [&#39;node-282 0&amp;282&#39;, 0.21116791929639261],
+ [&#39;node-283 0&amp;283&#39;, 0.17095908591525244],
+ [&#39;node-284 0&amp;284&#39;, 0.15795155543743086],
+ [&#39;node-285 0&amp;285&#39;, 0.14581605285506327],
+ [&#39;node-286 0&amp;286&#39;, 1.0000000000000004],
+ [&#39;node-287 0&amp;287&#39;, 0.1835726765549159],
+ [&#39;node-288 0&amp;288&#39;, 0.22315005768671392],
+ [&#39;node-289 0&amp;289&#39;, 0.1885950727413489],
+ [&#39;node-290 0&amp;290&#39;, 0.22315005768671392],
+ [&#39;node-291 0&amp;291&#39;, 0.16527332620352755],
+ [&#39;node-292 0&amp;292&#39;, 0.28675947864522694],
+ [&#39;node-293 0&amp;293&#39;, 0.2635464606704758],
+ [&#39;node-294 0&amp;294&#39;, 0.15653176481674955],
+ [&#39;node-295 0&amp;295&#39;, 0.17780249614160307],
+ [&#39;node-296 0&amp;296&#39;, 0.15653176481674955],
+ [&#39;node-297 0&amp;297&#39;, 0.19866218672199537],
+ [&#39;node-298 0&amp;298&#39;, 0.30291931569904856],
+ [&#39;node-299 0&amp;299&#39;, 0.14581605285506327],
+ [&#39;node-300 0&amp;300&#39;, 0.16527332620352755],
+ [&#39;node-301 0&amp;301&#39;, 1.0000000000000004],
+ [&#39;node-302 0&amp;302&#39;, 0.15653176481674955],
+ [&#39;node-303 0&amp;303&#39;, 1.0000000000000004],
+ [&#39;node-304 0&amp;304&#39;, 0.30291931569904856],
+ [&#39;node-305 0&amp;305&#39;, 0.28675947864522694],
+ [&#39;node-306 0&amp;306&#39;, 0.28675947864522694],
+ [&#39;node-307 0&amp;307&#39;, 0.12410647816638769],
+ [&#39;node-308 0&amp;308&#39;, 0.17780249614160307],
+ [&#39;node-309 0&amp;309&#39;, 0.2782001428115166],
+ [&#39;node-310 0&amp;310&#39;, 0.16527332620352755],
+ [&#39;node-311 0&amp;311&#39;, 0.2782001428115166],
+ [&#39;node-312 0&amp;312&#39;, 0.22342441280580266],
+ [&#39;node-313 0&amp;313&#39;, 0.12410647816638769],
+ [&#39;node-314 0&amp;314&#39;, 0.22315005768671392],
+ [&#39;node-315 0&amp;315&#39;, 0.30291931569904856],
+ [&#39;node-316 0&amp;316&#39;, 0.12410647816638769],
+ [&#39;node-317 0&amp;317&#39;, 0.30291931569904856],
+ [&#39;node-318 0&amp;318&#39;, 0.1885950727413489],
+ [&#39;node-319 0&amp;319&#39;, 0.28675947864522694],
+ [&#39;node-320 0&amp;320&#39;, 1.0000000000000004],
+ [&#39;node-321 0&amp;321&#39;, 0.20485330106738558],
+ [&#39;node-322 0&amp;322&#39;, 0.17095908591525244],
+ [&#39;node-323 0&amp;323&#39;, 0.20485330106738558],
+ [&#39;node-324 0&amp;324&#39;, 0.14581605285506327],
+ [&#39;node-325 0&amp;325&#39;, 0.22315005768671392],
+ [&#39;node-326 0&amp;326&#39;, 0.30291931569904856],
+ [&#39;node-327 0&amp;327&#39;, 0.2793302796169277],
+ [&#39;node-328 0&amp;328&#39;, 0.20776968480350463],
+ [&#39;node-329 0&amp;329&#39;, 0.1885950727413489],
+ [&#39;node-330 0&amp;330&#39;, 0.2782001428115166],
+ [&#39;node-331 0&amp;331&#39;, 0.1885950727413489],
+ [&#39;node-332 0&amp;332&#39;, 0.2793302796169277],
+ [&#39;node-333 0&amp;333&#39;, 0.22342441280580266],
+ [&#39;node-334 0&amp;334&#39;, 0.30291931569904856],
+ [&#39;node-335 0&amp;335&#39;, 0.20776968480350463],
+ [&#39;node-336 0&amp;336&#39;, 0.30291931569904856],
+ [&#39;node-337 0&amp;337&#39;, 0.2793302796169277],
+ [&#39;node-338 0&amp;338&#39;, 0.30291931569904856],
+ [&#39;node-339 0&amp;339&#39;, 0.2793302796169277],
+ [&#39;node-340 0&amp;340&#39;, 0.15916023659859277],
+ [&#39;node-341 0&amp;341&#39;, 0.1885950727413489],
+ [&#39;node-342 0&amp;342&#39;, 0.2782001428115166],
+ [&#39;node-343 0&amp;343&#39;, 0.5241732377802834],
+ [&#39;node-344 0&amp;344&#39;, 0.30291931569904856],
+ [&#39;node-345 0&amp;345&#39;, 0.19242103650164696],
+ [&#39;node-346 0&amp;346&#39;, 0.17095908591525244],
+ [&#39;node-347 0&amp;347&#39;, 0.16527332620352755],
+ [&#39;node-348 0&amp;348&#39;, 0.5241732377802834],
+ [&#39;node-349 0&amp;349&#39;, 0.12410647816638769],
+ [&#39;node-350 0&amp;350&#39;, 0.1885950727413489],
+ [&#39;node-351 0&amp;351&#39;, 0.2782001428115166],
+ [&#39;node-352 0&amp;352&#39;, 0.20683812987220646],
+ [&#39;node-353 0&amp;353&#39;, 0.22342441280580266],
+ [&#39;node-354 0&amp;354&#39;, 1.0000000000000004],
+ [&#39;node-355 0&amp;355&#39;, 0.20776968480350463],
+ [&#39;node-356 0&amp;356&#39;, 0.17780249614160307],
+ [&#39;node-357 0&amp;357&#39;, 0.20776968480350463],
+ [&#39;node-358 0&amp;358&#39;, 0.13617311431483353],
+ [&#39;node-359 0&amp;359&#39;, 0.30291931569904856],
+ [&#39;node-360 0&amp;360&#39;, 0.14581605285506327],
+ [&#39;node-361 0&amp;361&#39;, 0.14581605285506327],
+ [&#39;node-362 0&amp;362&#39;, 0.22315005768671392],
+ [&#39;node-363 0&amp;363&#39;, 1.0000000000000004],
+ [&#39;node-364 0&amp;364&#39;, 0.15795155543743086],
+ [&#39;node-365 0&amp;365&#39;, 0.19242103650164696],
+ [&#39;node-366 0&amp;366&#39;, 0.22315005768671392],
+ [&#39;node-367 0&amp;367&#39;, 0.12410647816638769],
+ [&#39;node-368 0&amp;368&#39;, 1.0000000000000004],
+ [&#39;node-369 0&amp;369&#39;, 0.19866218672199537],
+ [&#39;node-370 0&amp;370&#39;, 0.2782001428115166],
+ [&#39;node-371 0&amp;371&#39;, 0.16527332620352755],
+ [&#39;node-372 0&amp;372&#39;, 0.19242103650164696],
+ [&#39;node-373 0&amp;373&#39;, 0.2793302796169277],
+ [&#39;node-374 0&amp;374&#39;, 0.2782001428115166],
+ [&#39;node-375 0&amp;375&#39;, 0.5241732377802834],
+ [&#39;node-376 0&amp;376&#39;, 0.2635464606704758],
+ [&#39;node-377 0&amp;377&#39;, 0.22342441280580266],
+ [&#39;node-378 0&amp;378&#39;, 0.14581605285506327],
+ [&#39;node-379 0&amp;379&#39;, 0.1835726765549159],
+ [&#39;node-380 0&amp;380&#39;, 0.22315005768671392],
+ [&#39;node-381 0&amp;381&#39;, 0.22342441280580266],
+ [&#39;node-382 0&amp;382&#39;, 0.12410647816638769],
+ [&#39;node-383 0&amp;383&#39;, 0.15653176481674955],
+ [&#39;node-384 0&amp;384&#39;, 0.2782001428115166],
+ [&#39;node-385 0&amp;385&#39;, 0.15653176481674955],
+ [&#39;node-386 0&amp;386&#39;, 0.21116791929639261],
+ [&#39;node-387 0&amp;387&#39;, 0.15653176481674955],
+ [&#39;node-388 0&amp;388&#39;, 0.28675947864522694],
+ [&#39;node-389 0&amp;389&#39;, 0.20776968480350463],
+ [&#39;node-390 0&amp;390&#39;, 0.19866218672199537],
+ [&#39;node-391 0&amp;391&#39;, 0.14581605285506327],
+ [&#39;node-392 0&amp;392&#39;, 0.2782001428115166],
+ [&#39;node-393 0&amp;393&#39;, 0.5241732377802834],
+ [&#39;node-394 0&amp;394&#39;, 0.16527332620352755],
+ [&#39;node-395 0&amp;395&#39;, 0.2635464606704758],
+ [&#39;node-396 0&amp;396&#39;, 0.2782001428115166],
+ [&#39;node-397 0&amp;397&#39;, 0.28675947864522694],
+ [&#39;node-398 0&amp;398&#39;, 0.30291931569904856],
+ [&#39;node-399 0&amp;399&#39;, 0.17919981507969765],
+ [&#39;node-400 0&amp;400&#39;, 0.15916023659859277],
+ [&#39;node-401 0&amp;401&#39;, 0.14581605285506327],
+ [&#39;node-402 0&amp;402&#39;, 0.1885950727413489],
+ [&#39;node-403 0&amp;403&#39;, 0.17095908591525244],
+ [&#39;node-404 0&amp;404&#39;, 0.5241732377802834],
+ [&#39;node-405 0&amp;405&#39;, 0.1885950727413489],
+ [&#39;node-406 0&amp;406&#39;, 0.14581605285506327],
+ [&#39;node-407 0&amp;407&#39;, 0.2635464606704758],
+ [&#39;node-408 0&amp;408&#39;, 0.14581605285506327],
+ [&#39;node-409 0&amp;409&#39;, 0.21116791929639261],
+ [&#39;node-410 0&amp;410&#39;, 0.17780249614160307],
+ [&#39;node-411 0&amp;411&#39;, 0.20683812987220646],
+ [&#39;node-412 0&amp;412&#39;, 0.2793302796169277],
+ [&#39;node-413 0&amp;413&#39;, 0.19242103650164696],
+ [&#39;node-414 0&amp;414&#39;, 0.15653176481674955],
+ [&#39;node-415 0&amp;415&#39;, 0.21116791929639261],
+ [&#39;node-416 0&amp;416&#39;, 0.30291931569904856],
+ [&#39;node-417 0&amp;417&#39;, 0.1835726765549159],
+ [&#39;node-418 0&amp;418&#39;, 0.2782001428115166],
+ [&#39;node-419 0&amp;419&#39;, 0.28675947864522694],
+ [&#39;node-420 0&amp;420&#39;, 0.20776968480350463],
+ [&#39;node-421 0&amp;421&#39;, 0.15653176481674955],
+ [&#39;node-422 0&amp;422&#39;, 0.28675947864522694],
+ [&#39;node-423 0&amp;423&#39;, 0.30291931569904856],
+ [&#39;node-424 0&amp;424&#39;, 0.15795155543743086],
+ [&#39;node-425 0&amp;425&#39;, 0.15653176481674955],
+ [&#39;node-426 0&amp;426&#39;, 1.0000000000000004],
+ [&#39;node-427 0&amp;427&#39;, 0.20776968480350463],
+ [&#39;node-428 0&amp;428&#39;, 0.15795155543743086],
+ [&#39;node-429 0&amp;429&#39;, 0.30291931569904856],
+ [&#39;node-430 0&amp;430&#39;, 0.20683812987220646],
+ [&#39;node-431 0&amp;431&#39;, 0.1885950727413489],
+ [&#39;node-432 0&amp;432&#39;, 0.12410647816638769],
+ [&#39;node-433 0&amp;433&#39;, 0.1885950727413489],
+ [&#39;node-434 0&amp;434&#39;, 0.28675947864522694],
+ [&#39;node-435 0&amp;435&#39;, 0.17919981507969765],
+ [&#39;node-436 0&amp;436&#39;, 0.2793302796169277],
+ [&#39;node-437 0&amp;437&#39;, 0.5241732377802834],
+ [&#39;node-438 0&amp;438&#39;, 0.1835726765549159],
+ [&#39;node-439 0&amp;439&#39;, 0.19866218672199537],
+ [&#39;node-440 0&amp;440&#39;, 0.19866218672199537],
+ [&#39;node-441 0&amp;441&#39;, 0.20776968480350463],
+ [&#39;node-442 0&amp;442&#39;, 0.2793302796169277],
+ [&#39;node-443 0&amp;443&#39;, 1.0000000000000004],
+ [&#39;node-444 0&amp;444&#39;, 0.15795155543743086],
+ [&#39;node-445 0&amp;445&#39;, 0.2782001428115166],
+ [&#39;node-446 0&amp;446&#39;, 0.1885950727413489],
+ [&#39;node-447 0&amp;447&#39;, 0.15653176481674955],
+ [&#39;node-448 0&amp;448&#39;, 0.28675947864522694],
+ [&#39;node-449 0&amp;449&#39;, 0.14581605285506327],
+ [&#39;node-450 0&amp;450&#39;, 0.15916023659859277],
+ [&#39;node-451 0&amp;451&#39;, 0.28675947864522694],
+ [&#39;node-452 0&amp;452&#39;, 1.0000000000000004],
+ [&#39;node-453 0&amp;453&#39;, 0.17919981507969765],
+ [&#39;node-454 0&amp;454&#39;, 0.14581605285506327],
+ [&#39;node-455 0&amp;455&#39;, 0.15653176481674955],
+ [&#39;node-456 0&amp;456&#39;, 0.20776968480350463],
+ [&#39;node-457 0&amp;457&#39;, 0.17780249614160307],
+ [&#39;node-458 0&amp;458&#39;, 0.30291931569904856],
+ [&#39;node-459 0&amp;459&#39;, 0.14581605285506327],
+ [&#39;node-460 0&amp;460&#39;, 0.1885950727413489],
+ [&#39;node-461 0&amp;461&#39;, 0.14581605285506327],
+ [&#39;node-462 0&amp;462&#39;, 0.28675947864522694],
+ [&#39;node-463 0&amp;463&#39;, 0.1885950727413489],
+ [&#39;node-464 0&amp;464&#39;, 0.1885950727413489],
+ [&#39;node-465 0&amp;465&#39;, 0.15653176481674955],
+ [&#39;node-466 0&amp;466&#39;, 0.2782001428115166],
+ [&#39;node-467 0&amp;467&#39;, 0.28675947864522694],
+ [&#39;node-468 0&amp;468&#39;, 1.0000000000000004],
+ [&#39;node-469 0&amp;469&#39;, 1.0000000000000004],
+ [&#39;node-470 0&amp;470&#39;, 0.17095908591525244],
+ [&#39;node-471 0&amp;471&#39;, 0.30291931569904856],
+ [&#39;node-472 0&amp;472&#39;, 0.1885950727413489],
+ [&#39;node-473 0&amp;473&#39;, 0.28675947864522694],
+ [&#39;node-474 0&amp;474&#39;, 0.15653176481674955],
+ [&#39;node-475 0&amp;475&#39;, 0.5241732377802834],
+ [&#39;node-476 0&amp;476&#39;, 0.2782001428115166],
+ [&#39;node-477 0&amp;477&#39;, 0.20776968480350463],
+ [&#39;node-478 0&amp;478&#39;, 0.1885950727413489],
+ [&#39;node-479 0&amp;479&#39;, 0.2793302796169277],
+ [&#39;node-480 0&amp;480&#39;, 1.0000000000000004],
+ [&#39;node-481 0&amp;481&#39;, 0.1885950727413489],
+ [&#39;node-482 0&amp;482&#39;, 0.1835726765549159],
+ [&#39;node-483 0&amp;483&#39;, 0.17095908591525244],
+ [&#39;node-484 0&amp;484&#39;, 0.30291931569904856],
+ [&#39;node-485 0&amp;485&#39;, 0.19866218672199537],
+ [&#39;node-486 0&amp;486&#39;, 0.2782001428115166],
+ [&#39;node-487 0&amp;487&#39;, 0.21116791929639261],
+ [&#39;node-488 0&amp;488&#39;, 0.19242103650164696],
+ [&#39;node-489 0&amp;489&#39;, 0.15653176481674955],
+ [&#39;node-490 0&amp;490&#39;, 0.21116791929639261],
+ [&#39;node-491 0&amp;491&#39;, 0.5241732377802834],
+ [&#39;node-492 0&amp;492&#39;, 0.14581605285506327],
+ [&#39;node-493 0&amp;493&#39;, 0.19242103650164696],
+ [&#39;node-494 0&amp;494&#39;, 0.15795155543743086],
+ [&#39;node-495 0&amp;495&#39;, 0.30291931569904856],
+ [&#39;node-496 0&amp;496&#39;, 0.12410647816638769],
+ [&#39;node-497 0&amp;497&#39;, 1.0000000000000004],
+ [&#39;node-498 0&amp;498&#39;, 0.2635464606704758],
+ [&#39;node-499 0&amp;499&#39;, 0.2793302796169277],
+ [&#39;node-500 0&amp;500&#39;, 0.5241732377802834],
+ [&#39;node-501 0&amp;501&#39;, 0.15795155543743086],
+ [&#39;node-502 0&amp;502&#39;, 0.2782001428115166],
+ [&#39;node-503 0&amp;503&#39;, 0.2782001428115166],
+ [&#39;node-504 0&amp;504&#39;, 0.2635464606704758],
+ [&#39;node-505 0&amp;505&#39;, 0.15653176481674955],
+ [&#39;node-506 0&amp;506&#39;, 0.20776968480350463],
+ [&#39;node-507 0&amp;507&#39;, 0.5241732377802834],
+ [&#39;node-508 0&amp;508&#39;, 0.14581605285506327],
+ [&#39;node-509 0&amp;509&#39;, 0.5241732377802834],
+ [&#39;node-510 0&amp;510&#39;, 0.13617311431483353],
+ [&#39;node-511 0&amp;511&#39;, 0.19866218672199537],
+ [&#39;node-512 0&amp;512&#39;, 0.2782001428115166],
+ [&#39;node-513 0&amp;513&#39;, 0.21116791929639261],
+ [&#39;node-514 0&amp;514&#39;, 0.28675947864522694],
+ [&#39;node-515 0&amp;515&#39;, 0.2782001428115166],
+ [&#39;node-516 0&amp;516&#39;, 0.28675947864522694],
+ [&#39;node-517 0&amp;517&#39;, 0.20485330106738558],
+ [&#39;node-518 0&amp;518&#39;, 0.30291931569904856],
+ [&#39;node-519 0&amp;519&#39;, 0.22342441280580266],
+ [&#39;node-520 0&amp;520&#39;, 0.20776968480350463],
+ [&#39;node-521 0&amp;521&#39;, 0.20776968480350463],
+ [&#39;node-522 0&amp;522&#39;, 0.2782001428115166],
+ [&#39;node-523 0&amp;523&#39;, 0.15653176481674955],
+ [&#39;node-524 0&amp;524&#39;, 0.2782001428115166],
+ [&#39;node-525 0&amp;525&#39;, 0.30291931569904856],
+ [&#39;node-526 0&amp;526&#39;, 0.17780249614160307],
+ [&#39;node-527 0&amp;527&#39;, 0.2793302796169277],
+ [&#39;node-528 0&amp;528&#39;, 0.20485330106738558],
+ [&#39;node-529 0&amp;529&#39;, 0.2793302796169277],
+ [&#39;node-530 0&amp;530&#39;, 0.20776968480350463],
+ [&#39;node-531 0&amp;531&#39;, 0.2782001428115166],
+ [&#39;node-532 0&amp;532&#39;, 0.30291931569904856],
+ [&#39;node-533 0&amp;533&#39;, 0.17780249614160307],
+ [&#39;node-534 0&amp;534&#39;, 0.30291931569904856],
+ [&#39;node-535 0&amp;535&#39;, 0.2793302796169277],
+ [&#39;node-536 0&amp;536&#39;, 0.2793302796169277],
+ [&#39;node-537 0&amp;537&#39;, 0.5241732377802834],
+ [&#39;node-538 0&amp;538&#39;, 0.5241732377802834],
+ [&#39;node-539 0&amp;539&#39;, 0.2793302796169277],
+ [&#39;node-540 0&amp;540&#39;, 0.22342441280580266],
+ [&#39;node-541 0&amp;541&#39;, 0.1885950727413489],
+ [&#39;node-542 0&amp;542&#39;, 0.2793302796169277],
+ [&#39;node-543 0&amp;543&#39;, 0.20485330106738558],
+ [&#39;node-544 0&amp;544&#39;, 1.0000000000000004],
+ [&#39;node-545 0&amp;545&#39;, 0.13617311431483353],
+ [&#39;node-546 0&amp;546&#39;, 0.30291931569904856],
+ [&#39;node-547 0&amp;547&#39;, 0.20776968480350463],
+ [&#39;node-548 0&amp;548&#39;, 0.5241732377802834],
+ [&#39;node-549 0&amp;549&#39;, 0.15916023659859277],
+ [&#39;node-550 0&amp;550&#39;, 0.17919981507969765],
+ [&#39;node-551 0&amp;551&#39;, 0.1885950727413489],
+ [&#39;node-552 0&amp;552&#39;, 0.17919981507969765],
+ [&#39;node-553 0&amp;553&#39;, 0.22342441280580266],
+ [&#39;node-554 0&amp;554&#39;, 0.5241732377802834],
+ [&#39;node-555 0&amp;555&#39;, 0.17919981507969765],
+ [&#39;node-556 0&amp;556&#39;, 0.30291931569904856],
+ [&#39;node-557 0&amp;557&#39;, 0.1835726765549159],
+ [&#39;node-558 0&amp;558&#39;, 0.22342441280580266],
+ [&#39;node-559 0&amp;559&#39;, 0.15653176481674955],
+ [&#39;node-560 0&amp;560&#39;, 0.15916023659859277],
+ [&#39;node-561 0&amp;561&#39;, 0.20683812987220646],
+ [&#39;node-562 0&amp;562&#39;, 0.30291931569904856],
+ [&#39;node-563 0&amp;563&#39;, 0.13617311431483353],
+ [&#39;node-564 0&amp;564&#39;, 0.5241732377802834],
+ [&#39;node-565 0&amp;565&#39;, 0.17095908591525244],
+ [&#39;node-566 0&amp;566&#39;, 0.20683812987220646],
+ [&#39;node-567 0&amp;567&#39;, 0.13617311431483353],
+ [&#39;node-568 0&amp;568&#39;, 0.28675947864522694],
+ [&#39;node-569 0&amp;569&#39;, 0.22315005768671392],
+ [&#39;node-570 0&amp;570&#39;, 0.30291931569904856],
+ [&#39;node-571 0&amp;571&#39;, 0.15653176481674955],
+ [&#39;node-572 0&amp;572&#39;, 0.5241732377802834],
+ [&#39;node-573 0&amp;573&#39;, 1.0000000000000004],
+ [&#39;node-574 0&amp;574&#39;, 1.0000000000000004],
+ [&#39;node-575 0&amp;575&#39;, 0.20776968480350463],
+ [&#39;node-576 0&amp;576&#39;, 0.17919981507969765],
+ [&#39;node-577 0&amp;577&#39;, 0.30291931569904856],
+ [&#39;node-578 0&amp;578&#39;, 0.14581605285506327],
+ [&#39;node-579 0&amp;579&#39;, 0.30291931569904856],
+ [&#39;node-580 0&amp;580&#39;, 0.30291931569904856],
+ [&#39;node-581 0&amp;581&#39;, 0.14581605285506327],
+ [&#39;node-582 0&amp;582&#39;, 0.28675947864522694],
+ [&#39;node-583 0&amp;583&#39;, 0.2793302796169277],
+ [&#39;node-584 0&amp;584&#39;, 0.28675947864522694],
+ [&#39;node-585 0&amp;585&#39;, 0.2793302796169277],
+ [&#39;node-586 0&amp;586&#39;, 0.15653176481674955],
+ [&#39;node-587 0&amp;587&#39;, 0.28675947864522694],
+ [&#39;node-588 0&amp;588&#39;, 0.14581605285506327],
+ [&#39;node-589 0&amp;589&#39;, 0.15653176481674955],
+ [&#39;node-590 0&amp;590&#39;, 0.20776968480350463],
+ [&#39;node-591 1&amp;1&#39;, 1.0000000000000002],
+ [&#39;node-592 1&amp;2&#39;, 0.14193557946189705],
+ [&#39;node-593 1&amp;3&#39;, 0.13177541678636517],
+ [&#39;node-594 1&amp;4&#39;, 0.19495075664035516],
+ [&#39;node-595 1&amp;5&#39;, 0.15653176481674955],
+ [&#39;node-596 1&amp;6&#39;, 1.0000000000000002],
+ [&#39;node-597 1&amp;7&#39;, 0.3930230379817289],
+ [&#39;node-598 1&amp;8&#39;, 0.09450961553057023],
+ [&#39;node-599 1&amp;9&#39;, 0.1228180864476838],
+ [&#39;node-600 1&amp;10&#39;, 0.1272370639818258],
+ [&#39;node-601 1&amp;11&#39;, 0.09450961553057023],
+ [&#39;node-602 1&amp;12&#39;, 0.15653176481674955],
+ [&#39;node-603 1&amp;13&#39;, 0.13198434072362977],
+ [&#39;node-604 1&amp;14&#39;, 0.1228180864476838],
+ [&#39;node-605 1&amp;15&#39;, 0.1960082406222068],
+ [&#39;node-606 1&amp;16&#39;, 0.14193557946189705],
+ [&#39;node-607 1&amp;17&#39;, 0.23054945229191684],
+ [&#39;node-608 1&amp;18&#39;, 0.14193557946189705],
+ [&#39;node-609 1&amp;19&#39;, 0.3930230379817289],
+ [&#39;node-610 1&amp;20&#39;, 0.14992593673460192],
+ [&#39;node-611 1&amp;21&#39;, 0.14992593673460192],
+ [&#39;node-612 1&amp;22&#39;, 0.1989675959848967],
+ [&#39;node-613 1&amp;23&#39;, 1.0000000000000002],
+ [&#39;node-614 1&amp;24&#39;, 0.13583694941548483],
+ [&#39;node-615 1&amp;25&#39;, 0.19495075664035516],
+ [&#39;node-616 1&amp;26&#39;, 0.13583694941548483],
+ [&#39;node-617 1&amp;27&#39;, 0.13583694941548483],
+ [&#39;node-618 1&amp;28&#39;, 0.3499833251778589],
+ [&#39;node-619 1&amp;29&#39;, 0.32688897105617226],
+ [&#39;node-620 1&amp;30&#39;, 0.13177541678636517],
+ [&#39;node-621 1&amp;31&#39;, 0.14193557946189705],
+ [&#39;node-622 1&amp;32&#39;, 0.32688897105617226],
+ [&#39;node-623 1&amp;33&#39;, 0.13198434072362977],
+ [&#39;node-624 1&amp;34&#39;, 1.0000000000000002],
+ [&#39;node-625 1&amp;35&#39;, 0.2310462104241888],
+ [&#39;node-626 1&amp;36&#39;, 0.13198434072362977],
+ [&#39;node-627 1&amp;37&#39;, 0.2310462104241888],
+ [&#39;node-628 1&amp;38&#39;, 0.2310462104241888],
+ [&#39;node-629 1&amp;39&#39;, 0.09450961553057023],
+ [&#39;node-630 1&amp;40&#39;, 1.0000000000000002],
+ [&#39;node-631 1&amp;41&#39;, 0.3930230379817289],
+ [&#39;node-632 1&amp;42&#39;, 0.14193557946189705],
+ [&#39;node-633 1&amp;43&#39;, 0.2310462104241888],
+ [&#39;node-634 1&amp;44&#39;, 0.12224349903873415],
+ [&#39;node-635 1&amp;45&#39;, 0.15653176481674955],
+ [&#39;node-636 1&amp;46&#39;, 1.0000000000000002],
+ [&#39;node-637 1&amp;47&#39;, 0.23054945229191684],
+ [&#39;node-638 1&amp;48&#39;, 0.13198434072362977],
+ [&#39;node-639 1&amp;49&#39;, 0.19495075664035516],
+ [&#39;node-640 1&amp;50&#39;, 0.32688897105617226],
+ [&#39;node-641 1&amp;51&#39;, 0.14193557946189705],
+ [&#39;node-642 1&amp;52&#39;, 0.14992593673460192],
+ [&#39;node-643 1&amp;53&#39;, 0.14675896156931825],
+ [&#39;node-644 1&amp;54&#39;, 0.3499833251778589],
+ [&#39;node-645 1&amp;55&#39;, 0.14992593673460192],
+ [&#39;node-646 1&amp;56&#39;, 0.2310462104241888],
+ [&#39;node-647 1&amp;57&#39;, 0.13198434072362977],
+ [&#39;node-648 1&amp;58&#39;, 0.13198434072362977],
+ [&#39;node-649 1&amp;59&#39;, 0.2310462104241888],
+ [&#39;node-650 1&amp;60&#39;, 0.21171374014322514],
+ [&#39;node-651 1&amp;61&#39;, 0.2310462104241888],
+ [&#39;node-652 1&amp;62&#39;, 0.14675896156931825],
+ [&#39;node-653 1&amp;63&#39;, 0.15110491785320096],
+ [&#39;node-654 1&amp;64&#39;, 0.12371619636244269],
+ [&#39;node-655 1&amp;65&#39;, 0.13583694941548483],
+ [&#39;node-656 1&amp;66&#39;, 0.3499833251778589],
+ [&#39;node-657 1&amp;67&#39;, 0.14675896156931825],
+ [&#39;node-658 1&amp;68&#39;, 0.32688897105617226],
+ [&#39;node-659 1&amp;69&#39;, 0.32688897105617226],
+ [&#39;node-660 1&amp;70&#39;, 0.23054945229191684],
+ [&#39;node-661 1&amp;71&#39;, 0.14992593673460192],
+ [&#39;node-662 1&amp;72&#39;, 0.32688897105617226],
+ [&#39;node-663 1&amp;73&#39;, 0.1032790638154037],
+ [&#39;node-664 1&amp;74&#39;, 0.15653176481674955],
+ [&#39;node-665 1&amp;75&#39;, 0.13200157549130406],
+ [&#39;node-666 1&amp;76&#39;, 0.12371619636244269],
+ [&#39;node-667 1&amp;77&#39;, 0.14193557946189705],
+ [&#39;node-668 1&amp;78&#39;, 0.3930230379817289],
+ [&#39;node-669 1&amp;79&#39;, 0.13200157549130406],
+ [&#39;node-670 1&amp;80&#39;, 0.15110491785320096],
+ [&#39;node-671 1&amp;81&#39;, 0.13583694941548483],
+ [&#39;node-672 1&amp;82&#39;, 0.15653176481674955],
+ [&#39;node-673 1&amp;83&#39;, 0.13200157549130406],
+ [&#39;node-674 1&amp;84&#39;, 0.15475462431855036],
+ [&#39;node-675 1&amp;85&#39;, 0.1272370639818258],
+ [&#39;node-676 1&amp;86&#39;, 0.14992593673460192],
+ [&#39;node-677 1&amp;87&#39;, 0.13583694941548483],
+ [&#39;node-678 1&amp;88&#39;, 0.13583694941548483],
+ [&#39;node-679 1&amp;89&#39;, 0.23054945229191684],
+ [&#39;node-680 1&amp;90&#39;, 0.13198434072362977],
+ [&#39;node-681 1&amp;91&#39;, 0.14992593673460192],
+ [&#39;node-682 1&amp;92&#39;, 0.1032790638154037],
+ [&#39;node-683 1&amp;93&#39;, 0.15475462431855036],
+ [&#39;node-684 1&amp;94&#39;, 0.19495075664035516],
+ [&#39;node-685 1&amp;95&#39;, 0.15653176481674955],
+ [&#39;node-686 1&amp;96&#39;, 0.15110491785320096],
+ [&#39;node-687 1&amp;97&#39;, 0.12371619636244269],
+ [&#39;node-688 1&amp;98&#39;, 1.0000000000000002],
+ [&#39;node-689 1&amp;99&#39;, 0.23054945229191684],
+ [&#39;node-690 1&amp;100&#39;, 0.13314011904639342],
+ [&#39;node-691 1&amp;101&#39;, 0.13198434072362977],
+ [&#39;node-692 1&amp;102&#39;, 0.2310462104241888],
+ [&#39;node-693 1&amp;103&#39;, 0.32688897105617226],
+ [&#39;node-694 1&amp;104&#39;, 0.3930230379817289],
+ [&#39;node-695 1&amp;105&#39;, 0.13583694941548483],
+ [&#39;node-696 1&amp;106&#39;, 0.3499833251778589],
+ [&#39;node-697 1&amp;107&#39;, 0.32688897105617226],
+ [&#39;node-698 1&amp;108&#39;, 0.32688897105617226],
+ [&#39;node-699 1&amp;109&#39;, 0.13200157549130406],
+ [&#39;node-700 1&amp;110&#39;, 0.1989675959848967],
+ [&#39;node-701 1&amp;111&#39;, 1.0000000000000002],
+ [&#39;node-702 1&amp;112&#39;, 0.13583694941548483],
+ [&#39;node-703 1&amp;113&#39;, 0.12224349903873415],
+ [&#39;node-704 1&amp;114&#39;, 0.32688897105617226],
+ [&#39;node-705 1&amp;115&#39;, 0.1960082406222068],
+ [&#39;node-706 1&amp;116&#39;, 0.12371619636244269],
+ [&#39;node-707 1&amp;117&#39;, 0.14992593673460192],
+ [&#39;node-708 1&amp;118&#39;, 0.32688897105617226],
+ [&#39;node-709 1&amp;119&#39;, 0.13200157549130406],
+ [&#39;node-710 1&amp;120&#39;, 0.2310462104241888],
+ [&#39;node-711 1&amp;121&#39;, 1.0000000000000002],
+ [&#39;node-712 1&amp;122&#39;, 0.1272370639818258],
+ [&#39;node-713 1&amp;123&#39;, 0.23054945229191684],
+ [&#39;node-714 1&amp;124&#39;, 1.0000000000000002],
+ [&#39;node-715 1&amp;125&#39;, 0.14675896156931825],
+ [&#39;node-716 1&amp;126&#39;, 0.1960082406222068],
+ [&#39;node-717 1&amp;127&#39;, 0.12224349903873415],
+ [&#39;node-718 1&amp;128&#39;, 0.14992593673460192],
+ [&#39;node-719 1&amp;129&#39;, 0.3930230379817289],
+ [&#39;node-720 1&amp;130&#39;, 0.2310462104241888],
+ [&#39;node-721 1&amp;131&#39;, 0.23054945229191684],
+ [&#39;node-722 1&amp;132&#39;, 0.1960082406222068],
+ [&#39;node-723 1&amp;133&#39;, 0.15475462431855036],
+ [&#39;node-724 1&amp;134&#39;, 0.15653176481674955],
+ [&#39;node-725 1&amp;135&#39;, 0.12371619636244269],
+ [&#39;node-726 1&amp;136&#39;, 0.15653176481674955],
+ [&#39;node-727 1&amp;137&#39;, 0.1989675959848967],
+ [&#39;node-728 1&amp;138&#39;, 0.09450961553057023],
+ [&#39;node-729 1&amp;139&#39;, 0.13198434072362977],
+ [&#39;node-730 1&amp;140&#39;, 0.14992593673460192],
+ [&#39;node-731 1&amp;141&#39;, 0.2310462104241888],
+ [&#39;node-732 1&amp;142&#39;, 0.1989675959848967],
+ [&#39;node-733 1&amp;143&#39;, 0.12371619636244269],
+ [&#39;node-734 1&amp;144&#39;, 0.32688897105617226],
+ [&#39;node-735 1&amp;145&#39;, 0.15653176481674955],
+ [&#39;node-736 1&amp;146&#39;, 0.13198434072362977],
+ [&#39;node-737 1&amp;147&#39;, 0.14992593673460192],
+ [&#39;node-738 1&amp;148&#39;, 0.14193557946189705],
+ [&#39;node-739 1&amp;149&#39;, 0.14193557946189705],
+ [&#39;node-740 1&amp;150&#39;, 1.0000000000000002],
+ [&#39;node-741 1&amp;151&#39;, 0.13200157549130406],
+ [&#39;node-742 1&amp;152&#39;, 0.3499833251778589],
+ [&#39;node-743 1&amp;153&#39;, 0.13583694941548483],
+ [&#39;node-744 1&amp;154&#39;, 0.14675896156931825],
+ [&#39;node-745 1&amp;155&#39;, 0.21171374014322514],
+ [&#39;node-746 1&amp;156&#39;, 0.13198434072362977],
+ [&#39;node-747 1&amp;157&#39;, 0.14992593673460192],
+ [&#39;node-748 1&amp;158&#39;, 0.13200157549130406],
+ [&#39;node-749 1&amp;159&#39;, 0.23054945229191684],
+ [&#39;node-750 1&amp;160&#39;, 0.19495075664035516],
+ [&#39;node-751 1&amp;161&#39;, 0.1272370639818258],
+ [&#39;node-752 1&amp;162&#39;, 0.13198434072362977],
+ [&#39;node-753 1&amp;163&#39;, 0.15475462431855036],
+ [&#39;node-754 1&amp;164&#39;, 1.0000000000000002],
+ [&#39;node-755 1&amp;165&#39;, 0.15653176481674955],
+ [&#39;node-756 1&amp;166&#39;, 1.0000000000000002],
+ [&#39;node-757 1&amp;167&#39;, 0.1989675959848967],
+ [&#39;node-758 1&amp;168&#39;, 0.13583694941548483],
+ [&#39;node-759 1&amp;169&#39;, 0.2310462104241888],
+ [&#39;node-760 1&amp;170&#39;, 0.1272370639818258],
+ [&#39;node-761 1&amp;171&#39;, 0.14193557946189705],
+ [&#39;node-762 1&amp;172&#39;, 1.0000000000000002],
+ [&#39;node-763 1&amp;173&#39;, 0.23054945229191684],
+ [&#39;node-764 1&amp;174&#39;, 0.13198434072362977],
+ [&#39;node-765 1&amp;175&#39;, 0.13200157549130406],
+ [&#39;node-766 1&amp;176&#39;, 0.1989675959848967],
+ [&#39;node-767 1&amp;177&#39;, 0.2310462104241888],
+ [&#39;node-768 1&amp;178&#39;, 0.13583694941548483],
+ [&#39;node-769 1&amp;179&#39;, 0.14992593673460192],
+ [&#39;node-770 1&amp;180&#39;, 0.32688897105617226],
+ [&#39;node-771 1&amp;181&#39;, 0.1960082406222068],
+ [&#39;node-772 1&amp;182&#39;, 1.0000000000000002],
+ [&#39;node-773 1&amp;183&#39;, 0.19495075664035516],
+ [&#39;node-774 1&amp;184&#39;, 0.15110491785320096],
+ [&#39;node-775 1&amp;185&#39;, 0.09450961553057023],
+ [&#39;node-776 1&amp;186&#39;, 0.13583694941548483],
+ [&#39;node-777 1&amp;187&#39;, 0.32688897105617226],
+ [&#39;node-778 1&amp;188&#39;, 0.2310462104241888],
+ [&#39;node-779 1&amp;189&#39;, 0.15110491785320096],
+ [&#39;node-780 1&amp;190&#39;, 0.13177541678636517],
+ [&#39;node-781 1&amp;191&#39;, 0.1989675959848967],
+ [&#39;node-782 1&amp;192&#39;, 0.15475462431855036],
+ [&#39;node-783 1&amp;193&#39;, 0.13314011904639342],
+ [&#39;node-784 1&amp;194&#39;, 0.2310462104241888],
+ [&#39;node-785 1&amp;195&#39;, 0.09450961553057023],
+ [&#39;node-786 1&amp;196&#39;, 0.13583694941548483],
+ [&#39;node-787 1&amp;197&#39;, 0.15653176481674955],
+ [&#39;node-788 1&amp;198&#39;, 0.1032790638154037],
+ [&#39;node-789 1&amp;199&#39;, 0.15653176481674955],
+ [&#39;node-790 1&amp;200&#39;, 0.13198434072362977],
+ [&#39;node-791 1&amp;201&#39;, 0.3930230379817289],
+ [&#39;node-792 1&amp;202&#39;, 0.13583694941548483],
+ [&#39;node-793 1&amp;203&#39;, 0.1960082406222068],
+ [&#39;node-794 1&amp;204&#39;, 0.23054945229191684],
+ [&#39;node-795 1&amp;205&#39;, 0.2310462104241888],
+ [&#39;node-796 1&amp;206&#39;, 0.13314011904639342],
+ [&#39;node-797 1&amp;207&#39;, 0.09450961553057023],
+ [&#39;node-798 1&amp;208&#39;, 0.13177541678636517],
+ [&#39;node-799 1&amp;209&#39;, 0.15110491785320096],
+ [&#39;node-800 1&amp;210&#39;, 0.12224349903873415],
+ [&#39;node-801 1&amp;211&#39;, 0.14193557946189705],
+ [&#39;node-802 1&amp;212&#39;, 0.14193557946189705],
+ [&#39;node-803 1&amp;213&#39;, 0.14193557946189705],
+ [&#39;node-804 1&amp;214&#39;, 0.19495075664035516],
+ [&#39;node-805 1&amp;215&#39;, 0.14193557946189705],
+ [&#39;node-806 1&amp;216&#39;, 0.13314011904639342],
+ [&#39;node-807 1&amp;217&#39;, 0.21171374014322514],
+ [&#39;node-808 1&amp;218&#39;, 0.09450961553057023],
+ [&#39;node-809 1&amp;219&#39;, 0.1228180864476838],
+ [&#39;node-810 1&amp;220&#39;, 0.15653176481674955],
+ [&#39;node-811 1&amp;221&#39;, 0.14675896156931825],
+ [&#39;node-812 1&amp;222&#39;, 0.13198434072362977],
+ [&#39;node-813 1&amp;223&#39;, 0.13198434072362977],
+ [&#39;node-814 1&amp;224&#39;, 0.14193557946189705],
+ [&#39;node-815 1&amp;225&#39;, 0.14193557946189705],
+ [&#39;node-816 1&amp;226&#39;, 0.13198434072362977],
+ [&#39;node-817 1&amp;227&#39;, 0.15653176481674955],
+ [&#39;node-818 1&amp;228&#39;, 0.19495075664035516],
+ [&#39;node-819 1&amp;229&#39;, 0.13314011904639342],
+ [&#39;node-820 1&amp;230&#39;, 0.1989675959848967],
+ [&#39;node-821 1&amp;231&#39;, 0.13583694941548483],
+ [&#39;node-822 1&amp;232&#39;, 0.2310462104241888],
+ [&#39;node-823 1&amp;233&#39;, 0.15653176481674955],
+ [&#39;node-824 1&amp;234&#39;, 0.1032790638154037],
+ [&#39;node-825 1&amp;235&#39;, 0.13177541678636517],
+ [&#39;node-826 1&amp;236&#39;, 0.13198434072362977],
+ [&#39;node-827 1&amp;237&#39;, 0.3499833251778589],
+ [&#39;node-828 1&amp;238&#39;, 0.32688897105617226],
+ [&#39;node-829 1&amp;239&#39;, 0.13177541678636517],
+ [&#39;node-830 1&amp;240&#39;, 0.15475462431855036],
+ [&#39;node-831 1&amp;241&#39;, 0.15110491785320096],
+ [&#39;node-832 1&amp;242&#39;, 0.15653176481674955],
+ [&#39;node-833 1&amp;243&#39;, 0.2310462104241888],
+ [&#39;node-834 1&amp;244&#39;, 0.14992593673460192],
+ [&#39;node-835 1&amp;245&#39;, 0.1032790638154037],
+ [&#39;node-836 1&amp;246&#39;, 0.13583694941548483],
+ [&#39;node-837 1&amp;247&#39;, 0.14193557946189705],
+ [&#39;node-838 1&amp;248&#39;, 0.21171374014322514],
+ [&#39;node-839 1&amp;249&#39;, 0.14992593673460192],
+ [&#39;node-840 1&amp;250&#39;, 0.1228180864476838],
+ [&#39;node-841 1&amp;251&#39;, 0.14992593673460192],
+ [&#39;node-842 1&amp;252&#39;, 0.14675896156931825],
+ [&#39;node-843 1&amp;253&#39;, 0.23054945229191684],
+ [&#39;node-844 1&amp;254&#39;, 0.12371619636244269],
+ [&#39;node-845 1&amp;255&#39;, 0.14193557946189705],
+ [&#39;node-846 1&amp;256&#39;, 0.32688897105617226],
+ [&#39;node-847 1&amp;257&#39;, 0.23054945229191684],
+ [&#39;node-848 1&amp;258&#39;, 0.32688897105617226],
+ [&#39;node-849 1&amp;259&#39;, 0.14193557946189705],
+ [&#39;node-850 1&amp;260&#39;, 0.21171374014322514],
+ [&#39;node-851 1&amp;261&#39;, 0.13198434072362977],
+ [&#39;node-852 1&amp;262&#39;, 0.15110491785320096],
+ [&#39;node-853 1&amp;263&#39;, 0.23054945229191684],
+ [&#39;node-854 1&amp;264&#39;, 0.13583694941548483],
+ [&#39;node-855 1&amp;265&#39;, 0.13198434072362977],
+ [&#39;node-856 1&amp;266&#39;, 0.14992593673460192],
+ [&#39;node-857 1&amp;267&#39;, 0.15653176481674955],
+ [&#39;node-858 1&amp;268&#39;, 0.23054945229191684],
+ [&#39;node-859 1&amp;269&#39;, 0.23054945229191684],
+ [&#39;node-860 1&amp;270&#39;, 0.1272370639818258],
+ [&#39;node-861 1&amp;271&#39;, 1.0000000000000002],
+ [&#39;node-862 1&amp;272&#39;, 0.14193557946189705],
+ [&#39;node-863 1&amp;273&#39;, 0.15653176481674955],
+ [&#39;node-864 1&amp;274&#39;, 0.1228180864476838],
+ [&#39;node-865 1&amp;275&#39;, 0.1960082406222068],
+ [&#39;node-866 1&amp;276&#39;, 0.32688897105617226],
+ [&#39;node-867 1&amp;277&#39;, 0.1228180864476838],
+ [&#39;node-868 1&amp;278&#39;, 1.0000000000000002],
+ [&#39;node-869 1&amp;279&#39;, 0.13583694941548483],
+ [&#39;node-870 1&amp;280&#39;, 0.21171374014322514],
+ [&#39;node-871 1&amp;281&#39;, 0.15653176481674955],
+ [&#39;node-872 1&amp;282&#39;, 0.15475462431855036],
+ [&#39;node-873 1&amp;283&#39;, 0.1272370639818258],
+ [&#39;node-874 1&amp;284&#39;, 0.3499833251778589],
+ [&#39;node-875 1&amp;285&#39;, 0.32688897105617226],
+ [&#39;node-876 1&amp;286&#39;, 0.15653176481674955],
+ [&#39;node-877 1&amp;287&#39;, 0.3930230379817289],
+ [&#39;node-878 1&amp;288&#39;, 0.13314011904639342],
+ [&#39;node-879 1&amp;289&#39;, 0.2310462104241888],
+ [&#39;node-880 1&amp;290&#39;, 0.13314011904639342],
+ [&#39;node-881 1&amp;291&#39;, 0.14675896156931825],
+ [&#39;node-882 1&amp;292&#39;, 0.14992593673460192],
+ [&#39;node-883 1&amp;293&#39;, 0.1960082406222068],
+ [&#39;node-884 1&amp;294&#39;, 1.0000000000000002],
+ [&#39;node-885 1&amp;295&#39;, 0.1228180864476838],
+ [&#39;node-886 1&amp;296&#39;, 1.0000000000000002],
+ [&#39;node-887 1&amp;297&#39;, 0.13177541678636517],
+ [&#39;node-888 1&amp;298&#39;, 0.1989675959848967],
+ [&#39;node-889 1&amp;299&#39;, 0.32688897105617226],
+ [&#39;node-890 1&amp;300&#39;, 0.14675896156931825],
+ [&#39;node-891 1&amp;301&#39;, 0.15653176481674955],
+ [&#39;node-892 1&amp;302&#39;, 1.0000000000000002],
+ [&#39;node-893 1&amp;303&#39;, 0.15653176481674955],
+ [&#39;node-894 1&amp;304&#39;, 0.1989675959848967],
+ [&#39;node-895 1&amp;305&#39;, 0.14992593673460192],
+ [&#39;node-896 1&amp;306&#39;, 0.14992593673460192],
+ [&#39;node-897 1&amp;307&#39;, 0.1032790638154037],
+ [&#39;node-898 1&amp;308&#39;, 0.1228180864476838],
+ [&#39;node-899 1&amp;309&#39;, 0.23054945229191684],
+ [&#39;node-900 1&amp;310&#39;, 0.14675896156931825],
+ [&#39;node-901 1&amp;311&#39;, 0.23054945229191684],
+ [&#39;node-902 1&amp;312&#39;, 0.12224349903873415],
+ [&#39;node-903 1&amp;313&#39;, 0.1032790638154037],
+ [&#39;node-904 1&amp;314&#39;, 0.13314011904639342],
+ [&#39;node-905 1&amp;315&#39;, 0.1989675959848967],
+ [&#39;node-906 1&amp;316&#39;, 0.1032790638154037],
+ [&#39;node-907 1&amp;317&#39;, 0.1989675959848967],
+ [&#39;node-908 1&amp;318&#39;, 0.2310462104241888],
+ [&#39;node-909 1&amp;319&#39;, 0.14992593673460192],
+ [&#39;node-910 1&amp;320&#39;, 0.15653176481674955],
+ [&#39;node-911 1&amp;321&#39;, 0.13200157549130406],
+ [&#39;node-912 1&amp;322&#39;, 0.1272370639818258],
+ [&#39;node-913 1&amp;323&#39;, 0.13200157549130406],
+ [&#39;node-914 1&amp;324&#39;, 0.32688897105617226],
+ [&#39;node-915 1&amp;325&#39;, 0.13314011904639342],
+ [&#39;node-916 1&amp;326&#39;, 0.1989675959848967],
+ [&#39;node-917 1&amp;327&#39;, 0.13583694941548483],
+ [&#39;node-918 1&amp;328&#39;, 0.13198434072362977],
+ [&#39;node-919 1&amp;329&#39;, 0.2310462104241888],
+ [&#39;node-920 1&amp;330&#39;, 0.23054945229191684],
+ [&#39;node-921 1&amp;331&#39;, 0.2310462104241888],
+ [&#39;node-922 1&amp;332&#39;, 0.13583694941548483],
+ [&#39;node-923 1&amp;333&#39;, 0.12224349903873415],
+ [&#39;node-924 1&amp;334&#39;, 0.1989675959848967],
+ [&#39;node-925 1&amp;335&#39;, 0.13198434072362977],
+ [&#39;node-926 1&amp;336&#39;, 0.1989675959848967],
+ [&#39;node-927 1&amp;337&#39;, 0.13583694941548483],
+ [&#39;node-928 1&amp;338&#39;, 0.1989675959848967],
+ [&#39;node-929 1&amp;339&#39;, 0.13583694941548483],
+ [&#39;node-930 1&amp;340&#39;, 0.19495075664035516],
+ [&#39;node-931 1&amp;341&#39;, 0.2310462104241888],
+ [&#39;node-932 1&amp;342&#39;, 0.23054945229191684],
+ [&#39;node-933 1&amp;343&#39;, 0.14193557946189705],
+ [&#39;node-934 1&amp;344&#39;, 0.1989675959848967],
+ [&#39;node-935 1&amp;345&#39;, 0.12371619636244269],
+ [&#39;node-936 1&amp;346&#39;, 0.1272370639818258],
+ [&#39;node-937 1&amp;347&#39;, 0.14675896156931825],
+ [&#39;node-938 1&amp;348&#39;, 0.14193557946189705],
+ [&#39;node-939 1&amp;349&#39;, 0.1032790638154037],
+ [&#39;node-940 1&amp;350&#39;, 0.2310462104241888],
+ [&#39;node-941 1&amp;351&#39;, 0.23054945229191684],
+ [&#39;node-942 1&amp;352&#39;, 0.15110491785320096],
+ [&#39;node-943 1&amp;353&#39;, 0.12224349903873415],
+ [&#39;node-944 1&amp;354&#39;, 0.15653176481674955],
+ [&#39;node-945 1&amp;355&#39;, 0.13198434072362977],
+ [&#39;node-946 1&amp;356&#39;, 0.1228180864476838],
+ [&#39;node-947 1&amp;357&#39;, 0.13198434072362977],
+ [&#39;node-948 1&amp;358&#39;, 0.09450961553057023],
+ [&#39;node-949 1&amp;359&#39;, 0.1989675959848967],
+ [&#39;node-950 1&amp;360&#39;, 0.32688897105617226],
+ [&#39;node-951 1&amp;361&#39;, 0.32688897105617226],
+ [&#39;node-952 1&amp;362&#39;, 0.13314011904639342],
+ [&#39;node-953 1&amp;363&#39;, 0.15653176481674955],
+ [&#39;node-954 1&amp;364&#39;, 0.3499833251778589],
+ [&#39;node-955 1&amp;365&#39;, 0.12371619636244269],
+ [&#39;node-956 1&amp;366&#39;, 0.13314011904639342],
+ [&#39;node-957 1&amp;367&#39;, 0.1032790638154037],
+ [&#39;node-958 1&amp;368&#39;, 0.15653176481674955],
+ [&#39;node-959 1&amp;369&#39;, 0.13177541678636517],
+ [&#39;node-960 1&amp;370&#39;, 0.23054945229191684],
+ [&#39;node-961 1&amp;371&#39;, 0.14675896156931825],
+ [&#39;node-962 1&amp;372&#39;, 0.12371619636244269],
+ [&#39;node-963 1&amp;373&#39;, 0.13583694941548483],
+ [&#39;node-964 1&amp;374&#39;, 0.23054945229191684],
+ [&#39;node-965 1&amp;375&#39;, 0.14193557946189705],
+ [&#39;node-966 1&amp;376&#39;, 0.1960082406222068],
+ [&#39;node-967 1&amp;377&#39;, 0.12224349903873415],
+ [&#39;node-968 1&amp;378&#39;, 0.32688897105617226],
+ [&#39;node-969 1&amp;379&#39;, 0.3930230379817289],
+ [&#39;node-970 1&amp;380&#39;, 0.13314011904639342],
+ [&#39;node-971 1&amp;381&#39;, 0.12224349903873415],
+ [&#39;node-972 1&amp;382&#39;, 0.1032790638154037],
+ [&#39;node-973 1&amp;383&#39;, 1.0000000000000002],
+ [&#39;node-974 1&amp;384&#39;, 0.23054945229191684],
+ [&#39;node-975 1&amp;385&#39;, 1.0000000000000002],
+ [&#39;node-976 1&amp;386&#39;, 0.15475462431855036],
+ [&#39;node-977 1&amp;387&#39;, 1.0000000000000002],
+ [&#39;node-978 1&amp;388&#39;, 0.14992593673460192],
+ [&#39;node-979 1&amp;389&#39;, 0.13198434072362977],
+ [&#39;node-980 1&amp;390&#39;, 0.13177541678636517],
+ [&#39;node-981 1&amp;391&#39;, 0.32688897105617226],
+ [&#39;node-982 1&amp;392&#39;, 0.23054945229191684],
+ [&#39;node-983 1&amp;393&#39;, 0.14193557946189705],
+ [&#39;node-984 1&amp;394&#39;, 0.14675896156931825],
+ [&#39;node-985 1&amp;395&#39;, 0.1960082406222068],
+ [&#39;node-986 1&amp;396&#39;, 0.23054945229191684],
+ [&#39;node-987 1&amp;397&#39;, 0.14992593673460192],
+ [&#39;node-988 1&amp;398&#39;, 0.1989675959848967],
+ [&#39;node-989 1&amp;399&#39;, 0.21171374014322514],
+ [&#39;node-990 1&amp;400&#39;, 0.19495075664035516],
+ [&#39;node-991 1&amp;401&#39;, 0.32688897105617226],
+ [&#39;node-992 1&amp;402&#39;, 0.2310462104241888],
+ [&#39;node-993 1&amp;403&#39;, 0.1272370639818258],
+ [&#39;node-994 1&amp;404&#39;, 0.14193557946189705],
+ [&#39;node-995 1&amp;405&#39;, 0.2310462104241888],
+ [&#39;node-996 1&amp;406&#39;, 0.32688897105617226],
+ [&#39;node-997 1&amp;407&#39;, 0.1960082406222068],
+ [&#39;node-998 1&amp;408&#39;, 0.32688897105617226],
+ [&#39;node-999 1&amp;409&#39;, 0.15475462431855036],
+ ...]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">5</span><span class="p">]]</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)):</span>
+        <span class="n">similarity_score</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">([</span><span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="p">[</span><span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">j</span><span class="p">]])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">similarity_score</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">similarity_score</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">:</span>  <span class="c1"># Sesuaikan threshold sesuai kebutuhan</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">sentences</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">sentences</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="n">similarity_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1189245429662481
+0.5001726214552389
+0.13459579424148474
+0.11799261765530289
+1.000000000000002
+0.11026738274886996
+0.08631575275422829
+0.16667052840486213
+0.1189245429662481
+0.11084744929693897
+0.13685390503240974
+0.5001726214552389
+0.15206668832487852
+0.13459579424148474
+0.11799261765530289
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="graph">
+<h1>Graph<a class="headerlink" href="#graph" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggambar grafik</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">edge_labels</span> <span class="o">=</span> <span class="p">{(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
+
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">edge_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/76c619b4525b6796b77ca89e95dec5a6674b0b658583668cab71c25227951578.png" src="_images/76c619b4525b6796b77ca89e95dec5a6674b0b658583668cab71c25227951578.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closeness_centrality</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">closeness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+
+<span class="n">sorted_closeness_centrality</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">closeness_centrality</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
+
+<span class="c1"># Membuat DataFrame dari hasil yang diurutkan</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">sorted_closeness_centrality</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Node&#39;</span><span class="p">,</span> <span class="s1">&#39;Closeness Centrality&#39;</span><span class="p">])</span>
+
+<span class="c1"># Menampilkan DataFrame</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-640836c8-6e96-45d7-bd85-3531a171d3bf" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Node</th>
+      <th>Closeness Centrality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>KOMPAS.com  Juru Bicara Jubir Fraksi Partai Ke...</td>
+      <td>8.295688</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>JAKARTA, KOMPAS.com  Kepala Staf TNI Angkatan ...</td>
+      <td>8.267440</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>JAKARTA, KOMPAS.com  Ketua Tim Kampanye Daerah...</td>
+      <td>6.973698</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KOMPAS.com Dewan Pakar Tim Kampanye Nasional T...</td>
+      <td>6.812445</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>KOMPAS.com  Asam folat menjadi perbincangan pu...</td>
+      <td>6.658844</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-640836c8-6e96-45d7-bd85-3531a171d3bf')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-640836c8-6e96-45d7-bd85-3531a171d3bf button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-640836c8-6e96-45d7-bd85-3531a171d3bf');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-e8f6f20d-0334-489c-8c1c-1049cf6d42bf">
+  <button class="colab-df-quickchart" onclick="quickchart('df-e8f6f20d-0334-489c-8c1c-1049cf6d42bf')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-e8f6f20d-0334-489c-8c1c-1049cf6d42bf button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas%203_200411100033_Ovadilla%20Aisyah%20Rahma_PPW%20A.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Implementasi Latent Directlet Allocation (LDA)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Tugas%205_200411100033_Ringkasan.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Ringkasan Berita</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Berita</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-berita-politik">Crawling Data Berita Politik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-berita-nasional">Crawling Data Berita Nasional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-data-ke-csv">Import Data Ke CSV</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing">Pre Processing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenisasi">Tokenisasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ekstraksi-fitur">Ekstraksi Fitur</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cosinus-similarity">Cosinus Similarity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graph">Graph</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By OvadillaAisyahRahma
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
