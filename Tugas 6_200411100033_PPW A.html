@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 6_200411100033_PPW A';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -172,6 +174,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%201_200411100033_Ovadilla%20Aisyah%20Rahma_PPW%20A.html">TUGAS 1 CRAWLING DATA</a></li>
+
+
+
+
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Tugas%203_200411100033_Ovadilla%20Aisyah%20Rahma_PPW%20A.html">Implementasi Latent Directlet Allocation (LDA)</a></li>
 
 
@@ -440,7 +454,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>TUGAS PAGE RANK</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>TUGAS PAGE RANK</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank">Pagerank</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank"><strong>Algoritma Pagerank</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dan-dataset">Import dan Dataset</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenisasi">Tokenisasi</a><ul class="visible nav section-nav flex-column">
@@ -465,6 +485,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-page-rank">
 <h1><strong>TUGAS PAGE RANK</strong><a class="headerlink" href="#tugas-page-rank" title="Permalink to this heading">#</a></h1>
+<section id="pagerank">
+<h2>Pagerank<a class="headerlink" href="#pagerank" title="Permalink to this heading">#</a></h2>
+<p><strong>PageRank</strong> adalah algoritma yang digunakan oleh mesin pencari, terutama oleh Google, untuk menilai dan memberikan peringkat pada halaman web dalam hasil pencarian. Algoritma ini dikembangkan oleh Larry Page dan Sergey Brin, pendiri Google, dan dinamakan setelah nama Larry Page. PageRank mengukur otoritas atau kepentingan suatu halaman web berdasarkan seberapa banyak halaman lain yang mengaitkan ke halaman tersebut dan seberapa pentingnya halaman-halaman yang memberikan tautan tersebut.</p>
+<p>Dalam kasus kali ini PageRank mengukur otoritas atau kepentingan suatu kata berdasarkan seberapa banyak kata lain yang mengaitkan ke kata tersebut dan seberapa pentingnya kata-kata yang memberikan tautan tersebut.</p>
+<section id="algoritma-pagerank">
+<h3><strong>Algoritma Pagerank</strong><a class="headerlink" href="#algoritma-pagerank" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Identifikasi kata-kata yang akan dievaluasi.</p></li>
+<li><p>Buat graph antar kata dengan tautan antar kata.</p></li>
+<li><p>Inisialisasi pagerank, Setiap halaman web diberikan nilai awal PageRank yang sama.</p></li>
+<li><p>Kemudian lakukan iterasi perhitungan pagerank.</p></li>
+</ol>
+<p><strong>Rumus Pagerank :</strong></p>
+<p><span class="math notranslate nohighlight">\(\text{PR(A)}=\frac{d}{N} + \left( 1 - d\right)\left( \sum_{}^{} \frac{\text{Rank(i)}}{Outlink(i)} \right)\)</span></p>
+<ul class="simple">
+<li><p>PR(i) adalah PageRank dari kata A</p></li>
+<li><p>d adalah faktor damping (biasanya 0.85 untuk Google PageRank)</p></li>
+<li><p>N adalah jumlah total kata</p></li>
+</ul>
+</section>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="import-dan-dataset">
 <h1>Import dan Dataset<a class="headerlink" href="#import-dan-dataset" title="Permalink to this heading">#</a></h1>
@@ -491,7 +532,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1746b457-6660-4bf3-988e-e8c428f627d7" class="colab-df-container">
+  <div id="df-7a1f0592-8afd-4b82-840c-c09c345bbd66" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -589,7 +630,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-1746b457-6660-4bf3-988e-e8c428f627d7')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-7a1f0592-8afd-4b82-840c-c09c345bbd66')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -641,12 +682,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-1746b457-6660-4bf3-988e-e8c428f627d7 button.colab-df-convert');
+        document.querySelector('#df-7a1f0592-8afd-4b82-840c-c09c345bbd66 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-1746b457-6660-4bf3-988e-e8c428f627d7');
+        const element = document.querySelector('#df-7a1f0592-8afd-4b82-840c-c09c345bbd66');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -745,13 +786,15 @@ document.write(`
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/genesis.zip.
 [nltk_data]    | Downloading package gutenberg to /root/nltk_data...
 [nltk_data]    |   Unzipping corpora/gutenberg.zip.
-[nltk_data]    | Downloading package inaugural to /root/nltk_data...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/inaugural.zip.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package inaugural to /root/nltk_data...
+[nltk_data]    |   Unzipping corpora/inaugural.zip.
 [nltk_data]    | Downloading package movie_reviews to
 [nltk_data]    |     /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/movie_reviews.zip.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/movie_reviews.zip.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package names to /root/nltk_data...
@@ -759,16 +802,16 @@ document.write(`
 [nltk_data]    | Downloading package shakespeare to /root/nltk_data...
 [nltk_data]    |   Unzipping corpora/shakespeare.zip.
 [nltk_data]    | Downloading package stopwords to /root/nltk_data...
-[nltk_data]    |   Package stopwords is already up-to-date!
-[nltk_data]    | Downloading package treebank to /root/nltk_data...
+[nltk_data]    |   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package treebank to /root/nltk_data...
 [nltk_data]    |   Unzipping corpora/treebank.zip.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package twitter_samples to
 [nltk_data]    |     /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/twitter_samples.zip.
+[nltk_data]    |   Unzipping corpora/twitter_samples.zip.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package omw to /root/nltk_data...
@@ -781,7 +824,9 @@ document.write(`
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package wordnet31 to /root/nltk_data...
 [nltk_data]    | Downloading package wordnet_ic to /root/nltk_data...
-[nltk_data]    |   Unzipping corpora/wordnet_ic.zip.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping corpora/wordnet_ic.zip.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package words to /root/nltk_data...
@@ -791,18 +836,22 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping chunkers/maxent_ne_chunker.zip.
+[nltk_data]    | Downloading package punkt to /root/nltk_data...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package punkt to /root/nltk_data...
-[nltk_data]    |   Package punkt is already up-to-date!
-[nltk_data]    | Downloading package snowball_data to
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | Downloading package snowball_data to
 [nltk_data]    |     /root/nltk_data...
 [nltk_data]    | Downloading package averaged_perceptron_tagger to
 [nltk_data]    |     /root/nltk_data...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Unzipping taggers/averaged_perceptron_tagger.zip.
-[nltk_data]    | 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    | 
 [nltk_data]  Done downloading collection popular
 [nltk_data] Downloading package stopwords to /root/nltk_data...
 [nltk_data]   Package stopwords is already up-to-date!
@@ -822,7 +871,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9753ef63-acd0-4765-8c37-ae6b58a221d0" class="colab-df-container">
+  <div id="df-e841462c-a4b8-4c25-ad87-6f9648534ec3" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -877,7 +926,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-9753ef63-acd0-4765-8c37-ae6b58a221d0')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e841462c-a4b8-4c25-ad87-6f9648534ec3')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -929,12 +978,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-9753ef63-acd0-4765-8c37-ae6b58a221d0 button.colab-df-convert');
+        document.querySelector('#df-e841462c-a4b8-4c25-ad87-6f9648534ec3 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-9753ef63-acd0-4765-8c37-ae6b58a221d0');
+        const element = document.querySelector('#df-e841462c-a4b8-4c25-ad87-6f9648534ec3');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -982,7 +1031,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5de5dbec-81c8-49f0-ab16-dfcddf2b6df3" class="colab-df-container">
+  <div id="df-ce1da647-7602-4f76-b3da-3e4966b2bf26" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1049,7 +1098,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5de5dbec-81c8-49f0-ab16-dfcddf2b6df3')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ce1da647-7602-4f76-b3da-3e4966b2bf26')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1101,12 +1150,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5de5dbec-81c8-49f0-ab16-dfcddf2b6df3 button.colab-df-convert');
+        document.querySelector('#df-ce1da647-7602-4f76-b3da-3e4966b2bf26 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5de5dbec-81c8-49f0-ab16-dfcddf2b6df3');
+        const element = document.querySelector('#df-ce1da647-7602-4f76-b3da-3e4966b2bf26');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1165,7 +1214,7 @@ document.write(`
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-63da951d-1bb6-43e9-9e8b-e53d880a98ce" class="colab-df-container">
+  <div id="df-e0222263-b54d-4651-97a1-f561e758ab9f" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1479,7 +1528,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-63da951d-1bb6-43e9-9e8b-e53d880a98ce')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e0222263-b54d-4651-97a1-f561e758ab9f')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1531,12 +1580,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-63da951d-1bb6-43e9-9e8b-e53d880a98ce button.colab-df-convert');
+        document.querySelector('#df-e0222263-b54d-4651-97a1-f561e758ab9f button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-63da951d-1bb6-43e9-9e8b-e53d880a98ce');
+        const element = document.querySelector('#df-e0222263-b54d-4651-97a1-f561e758ab9f');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1587,7 +1636,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cf03224bbe392cdf72036d42d421cf86d95e80cadbea1413447bf313e55ffbc4.png" src="_images/cf03224bbe392cdf72036d42d421cf86d95e80cadbea1413447bf313e55ffbc4.png" />
+<img alt="_images/84bc00744a9116bd853368cdf39be99c1bec59827f91e9acde30160bdbbf8d3a.png" src="_images/84bc00744a9116bd853368cdf39be99c1bec59827f91e9acde30160bdbbf8d3a.png" />
 </div>
 </div>
 </section>
@@ -1769,7 +1818,13 @@ Rank 8: pemerataan nilai Pagerank 0.06664843831481607
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>TUGAS PAGE RANK</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>TUGAS PAGE RANK</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank">Pagerank</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank"><strong>Algoritma Pagerank</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dan-dataset">Import dan Dataset</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenisasi">Tokenisasi</a><ul class="visible nav section-nav flex-column">
